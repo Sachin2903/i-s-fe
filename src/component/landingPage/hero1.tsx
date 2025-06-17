@@ -3,7 +3,7 @@ import and_logo from "@/assests/landingPage/hero1/andLogo.png";
 
 export default function Hero1() {
     return <section className="w-full flex justify-start flex-col items-center   h-full">
-        <Navbar />
+        <Navbar color={false} />
         <video
             autoPlay
             loop

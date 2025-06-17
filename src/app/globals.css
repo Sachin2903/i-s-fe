@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
-*{
+* {
   box-sizing: border-box;
+}
+
+.font-lobster {
+  font-family: 'Lobster', cursive;
 }
 
 ::-webkit-scrollbar{

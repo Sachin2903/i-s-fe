@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+      </style>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
