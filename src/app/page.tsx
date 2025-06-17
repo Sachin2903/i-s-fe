@@ -8,7 +8,7 @@ import Hero5 from "@/component/landingPage/hero5";
 import KnowMore from "@/component/landingPage/knowMore";
 
 export default function Home() {
-  return (<main className="w-dvw h-dvh relative overflow-h-auto overflow-x-hidden">
+  return (<main id="main-landing-page" className="w-dvw h-dvh relative overflow-h-auto overflow-x-hidden">
     <Hero1 />
     <Hero2/>
     <Hero3/>

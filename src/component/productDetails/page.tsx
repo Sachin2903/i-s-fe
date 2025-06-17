@@ -27,13 +27,13 @@ const responsive = {
     partialVisibilityGutter: 40,
   },
   desktop: {
-    breakpoint: { max: 1440, min: 1024 },
+    breakpoint: { max: 1440, min: 1000 },
     items: 4,
     partialVisibilityGutter: 30,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 768 },
-    items: 4,
+    breakpoint: { max: 1000, min: 768 },
+    items: 3,
     partialVisibilityGutter: 20,
   },
   smallTablet: {
