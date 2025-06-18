@@ -43,7 +43,7 @@ export default function Hero4() {
         <span className="relative inline-block">
           <img
             src={textDesign.src}
-            className="absolute -bottom-2.5 left-0 w-full"
+            className="absolute -bottom-1 left-0 w-full"
             alt="i&s"
           />
           people

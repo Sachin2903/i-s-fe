@@ -1,4 +1,7 @@
 "use client";
+import { allProductsArray } from "@/data/productsData";
+import Link from "next/link";
+import { useState } from "react";
 import { IoMdCall } from "react-icons/io";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -16,68 +19,86 @@ const CustomDot = ({ onClick, ...rest }: any) => {
 };
 
 const responsive = {
-  superLargeDesktop: {
-    breakpoint: { max: 4000, min: 3000 },
-    items: 7,
-    partialVisibilityGutter: 50,
-  },
-  largeDesktop: {
-    breakpoint: { max: 3000, min: 1440 },
-    items: 6,
-    partialVisibilityGutter: 40,
-  },
-  desktop: {
-    breakpoint: { max: 1440, min: 1000 },
-    items: 4,
-    partialVisibilityGutter: 30,
-  },
-  tablet: {
-    breakpoint: { max: 1000, min: 768 },
-    items: 3,
-    partialVisibilityGutter: 20,
-  },
-  smallTablet: {
-    breakpoint: { max: 768, min: 550 },
-    items: 2,
-    partialVisibilityGutter: 15,
-  },
-  mobile: {
-    breakpoint: { max: 550, min: 0 },
-    items: 1,
-    partialVisibilityGutter: 10,
-  },
+    superLargeDesktop: {
+        breakpoint: { max: 4000, min: 3000 },
+        items: 7,
+        partialVisibilityGutter: 50,
+    },
+    largeDesktop: {
+        breakpoint: { max: 3000, min: 1440 },
+        items: 6,
+        partialVisibilityGutter: 40,
+    },
+    desktop: {
+        breakpoint: { max: 1440, min: 1000 },
+        items: 4,
+        partialVisibilityGutter: 30,
+    },
+    tablet: {
+        breakpoint: { max: 1000, min: 768 },
+        items: 3,
+        partialVisibilityGutter: 20,
+    },
+    smallTablet: {
+        breakpoint: { max: 768, min: 550 },
+        items: 2,
+        partialVisibilityGutter: 15,
+    },
+    mobile: {
+        breakpoint: { max: 550, min: 0 },
+        items: 1,
+        partialVisibilityGutter: 10,
+    },
 };
 
 
-export default function ProductDetailsHelper() {
+export default function ProductDetailsHelper({ product }: any) {
+    const [items, setItems] = useState(product);
+
     return <main className="full pb-8">
 
         <section className="flex md:flex-row    px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] flex-col  justify-start pt-8 gap-5 lg:gap-6 xl:gap-7 items-start">
             <aside className="flex w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
-                <aside className="w-full sm:w-[378] h-[382px] md:w-[329px] md:h-[290px] lg:w-[420px] lg:h-[345px] xl:w-[521px] xl:h-[426px] border-gray-200 border shadow-md flex justify-center items-center ">
-                    <img className="max-w-full object-cover object-top h-full" alt="i&s" src="https://randomuser.me/api/portraits/men/1.jpg" />
+                <aside className="w-full p-6 sm:w-[378] h-[382px] md:w-[329px] md:h-[290px] lg:w-[420px] lg:h-[345px] xl:w-[521px] xl:h-[426px]  flex justify-center items-center ">
+                    <img className="max-w-full object-cover object-top h-full" alt="i&s" src={items?.img[0].src} />
                 </aside>
 
                 <aside className="flex gap-2 ml-3 md:ml-4 lg:ml-6 flex-col">
-                    <div className="w-[80px] h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow-md =">
-                        <img className="h-full object-cover object-top max-w-full" alt="i&s" src="https://randomuser.me/api/portraits/men/1.jpg" />
-                    </div>
-                    <div className="w-[80px] h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow-md =">
-                        <img className="h-full object-cover object-top max-w-full" alt="i&s" src="https://randomuser.me/api/portraits/men/1.jpg" />
-                    </div>
-                    <div className="w-[80px] h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow-md =">
-                        <img className="h-full object-cover object-top max-w-full" alt="i&s" src="https://randomuser.me/api/portraits/men/1.jpg" />
-                    </div>
-                    <div className="w-[80px] h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow-md =">
-                        <img className="h-full object-cover object-top max-w-full" alt="i&s" src="https://randomuser.me/api/portraits/men/1.jpg" />
-                    </div>
+                    {
+                        items?.img.slice(1).map((data: any, index: number) => {
+                            return (
+                                <div
+                                    key={index}
+                                    onClick={() => {
+                                        setItems((prev: any) => {
+                                            const newImgArray = [...prev.img];
+                                            const clickedIndex = index + 1;
+
+                                            [newImgArray[0], newImgArray[clickedIndex]] = [
+                                                newImgArray[clickedIndex],
+                                                newImgArray[0],
+                                            ];
+                                            return { ...prev, img: newImgArray };
+                                        });
+                                    }}
+                                    className="w-[80px] p-2 h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer"
+                                >
+                                    <img
+                                        className="h-full object-cover object-top max-w-full"
+                                        alt="i&s"
+                                        src={data.src}
+                                    />
+                                </div>
+                            );
+                        })
+                    }
 
                 </aside>
             </aside>
             <aside className="flex gap-1 md:border-l min-h-[382px] md:min-h-[290px lg:min-h-[345px] xl:min-h-[426px]  md:pl-4 lg:pl-6 md:border-[#c7cacf] max-w-[940px]  flex-col  justify-start items-start">
-                <p className="text-[#7F848D]  font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">Control Valves</p>
-                <p className="text-[#000B1D]  font-semibold text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[40px]">Ball Control Valves</p>
-                <p className="text-[#7F848D]  font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] ">Ball control valves are precision-engineered to regulate flow by rotating a ball with a hole through its center. Known for their durability and tight shut-off, these valves provide reliable control of liquids and gases in various industrial applications</p>
+                <p className="text-[#7F848D]  font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] capitalize xl:text-[20px]">{items.type?.toLowerCase()}</p>
+                <p className="text-[#000B1D]  font-semibold text-[22px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[40px]">{items.name}</p>
+                <p className="text-[#7F848D]  font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] ">{items.des}</p>
 
                 <p className="text-black  mt-1 font-bold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">Features</p>
                 <ol className="text-[#7F848D] pl-7 list-disc  font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] ">
@@ -86,7 +107,7 @@ export default function ProductDetailsHelper() {
                     <li>Ratings : #150 to #600 Equivalents in BS10, DIN, IS, JIS</li>
                     <li> End Connection :  Wafer Type </li>
                 </ol>
-                <button className="px-12 sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-xl text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
+                <button className="px-12 sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
 
             </aside>
         </section>
@@ -111,16 +132,19 @@ export default function ProductDetailsHelper() {
                 dotListClass="flex justify-center items-center "
                 className="w-full  "
             >
-                {new Array(10).fill(0).map((_, index) => (
-                    <aside key={index} className=" border mb-16 mx-[4%] rounded-lg p-4 border-[#EBEDF0] shadow-md" >
-                        <div className="w-full shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                            <img className="max-w-full h-[85%]" src={`https://randomuser.me/api/portraits/men/${index + 1}.jpg`} alt="i&s" />
-                        </div>
-                        <p className="text-[#323334] px-0.5 font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] ">Transmitters with Remote Seal</p>
-                        <p className="text-[12px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">Differential Pressure Transmitter with Remote Seal and Capillary</p>
-                        <button className="hover:bg-[#0057FF] font-medium mt-6 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                    </aside>
-                ))}
+
+                {
+                    allProductsArray.filter((data: Record<string, any>) => data.type == items.type).map((data: Record<string, any>, index: number) => {
+                        return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] rounded-lg p-4 border-[#EBEDF0] shadow-md" >
+                            <div className="w-full shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
+                                <img className="max-w-full h-[85%]" src={data?.img?.[0]?.src} alt="i&s" />
+                            </div>
+                            <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
+                            <p className="text-[12px] line-clamp-2 min-h-[40px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">{data.des}</p>
+                            <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
+                        </aside></Link>
+                    })
+                }
             </Carousel>
         </section>
 

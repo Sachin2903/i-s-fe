@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +25,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-      </style>
+      <head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        </style>
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NextTopLoader
+          color="#0057FF"
+          height={4}
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #2299DD,0 0 5px #2299DD"
+          zIndex={1600}
+          showAtBottom={false}
+
+
+        />
         {children}
       </body>
     </html>
