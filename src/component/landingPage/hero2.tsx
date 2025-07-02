@@ -71,7 +71,6 @@ export default function Hero2() {
                             View all <TiArrowRight className="flex-shrink-0 scale-150" />
                         </p>
                     </Link>
-
                 })
             }
         </section>

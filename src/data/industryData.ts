@@ -20,6 +20,31 @@ import steel3 from "@/assests/industry/industry/steel3.png";
 import cement1 from "@/assests/industry/industry/cement1.png";
 import defense1 from "@/assests/industry/industry/defense1.png";
 
+import water1 from "@/assests/industry/industry/water1.png";
+import water2 from "@/assests/industry/industry/water2.png";
+import water3 from "@/assests/industry/industry/water3.png";
+
+import distilleries1 from "@/assests/industry/industry/distilleries1.png";
+import distilleries2 from "@/assests/industry/industry/distilleries1.png";
+import distilleries3 from "@/assests/industry/industry/distilleries1.png";
+
+import textile1 from "@/assests/industry/industry/textile1.png";
+import textile2 from "@/assests/industry/industry/textile2.png";
+
+
+import sugar1 from "@/assests/industry/industry/sugar1.png";
+import sugar2 from "@/assests/industry/industry/sugar2.png";
+import sugar3 from "@/assests/industry/industry/sugar3.png";
+import sugar4 from "@/assests/industry/industry/sugar4.png";
+
+
+import paper1 from "@/assests/industry/industry/paper1.png";
+import paper2 from "@/assests/industry/industry/paper2.png";
+import paper3 from "@/assests/industry/industry/paper3.png";
+import paper4 from "@/assests/industry/industry/paper4.png";
+
+
+
 export const IndustryDataArray = [
     {
         name: "Damodar Valley Corporation - DVC",
@@ -138,6 +163,118 @@ export const IndustryDataArray = [
         des: "Defense Sector",
         img: defense1,
         type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "UP Jal Nigam",
+        des: "Water Management",
+        img: water1,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    },
+    {
+        name: "Uttarakhand Jal Sansthan",
+        des: "Water Management",
+        img: water2,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    },
+    {
+        name: "Delhi Jal Board",
+        des: "Water Management",
+        img: water3,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    }
+    , {
+        name: "Carlsberg",
+        des: "Distilleries",
+        img: distilleries1,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Brew Force Distilleries pvt ltd.",
+        des: "Distilleries",
+        img: distilleries2,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Avira Distillery",
+        des: "Distilleries",
+        img: distilleries3,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Shahi Exports Group",
+        des: "Textile Industry",
+        img: textile1,
+        type: ["TEXTILE"],
+        subType: []
+    },
+    {
+        name: "Jai Shree Textiles (Aditya Birla Group)",
+        des: "Textile Industry",
+        img: textile2,
+        type: ["TEXTILE"],
+        subType: []
+    },
+    {
+        name: "Bajaj Hindustan Ltd.",
+        des: "Sugar Industry",
+        img: sugar1,
+        type: ["SUGAR"],
+        subType: []
+    },
+    {
+        name: "Balrampur chini mills",
+        des: "Sugar Industry",
+        img: sugar2,
+        type: ["SUGAR"],
+        subType: []
+    },
+    {
+        name: "Mylar Sugars ltd",
+        des: "Sugar Industry",
+        img: sugar3,
+        type: ["SUGAR"],
+        subType: []
+    },
+    {
+        name: "HPCL Biofuels ltd",
+        des: "Sugar Industry",
+        img: sugar4,
+        type: ["SUGAR"],
+        subType: []
+    },
+     {
+        name: "Trident Group",
+        des: "Paper & Pulp Industry",
+        img: paper1,
+        type: ["PAPER & PULP"],
+        subType: []
+    },
+    {
+        name: "Dev Prayag Paper Mill",
+        des: "Paper & Pulp Industry",
+        img: paper2,
+        type: ["PAPER & PULP"],
+        subType: []
+    },
+    {
+        name: "Century Pulp & Paper",
+        des: "Paper & Pulp Industry",
+        img: paper3,
+        type: ["PAPER & PULP"],
+        subType: []
+    },
+    {
+        name: "Andhra Paper Limited",
+        des: "Paper & Pulp Industry",
+        img: paper4,
+        type: ["PAPER & PULP"],
         subType: []
     }
 ]

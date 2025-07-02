@@ -14,6 +14,16 @@ import steelBanner from "@/assests/industry/steelBanner.png";
 import cementBanner from "@/assests/industry/cementBanner.png";
 import defenseBanner from "@/assests/industry/defenseBanner.png";
 import { IndustryDataArray } from "@/data/industryData";
+import water_manage from "@/assests/industry/water_managment.png";
+import water_manage_banner from "@/assests/industry/watermanagementBanner.png";
+import distilleries from "@/assests/industry/distilleries.png";
+import textile from "@/assests/industry/textile.png";
+import sugar from "@/assests/industry/sugar.png";
+import paperpulp from "@/assests/industry/paper.png";
+import distilleries_banner from "@/assests/industry/distillerbanner.png";
+import textile_banner from "@/assests/industry/texttileBanner.png";
+import sugar_banner from "@/assests/industry/sugarBanner.png";
+import paperpulp_banner from "@/assests/industry/paperpulpbanner.png";
 
 const IndustryTypes = [
     {
@@ -66,6 +76,46 @@ const IndustryTypes = [
         des: "For decades, we’ve been at the forefront of defence innovation—delivering mission-critical solutions that enhance surveillance, mobility, communication, and operational readiness.",
         banner: defenseBanner
 
+    },
+    {
+        name: "Water Management",
+        img: water_manage,
+        bannerHeading: "Delivering Smart Solutions for Every Drop",
+        des: "Our technologies streamline water treatment, monitoring, and distribution—ensuring reliability, efficiency, and environmental stewardship.",
+        banner: water_manage_banner
+
+    },
+    {
+        name: "Distilleries",
+        img: distilleries,
+        bannerHeading: "Crafting Precision in Every Drop",
+        des: "With cutting-edge automation and safety controls, we help distilleries achieve consistent quality, traceability, and operational excellence.",
+        banner: distilleries_banner
+
+    },
+    {
+        name: "Textile",
+        img: textile,
+        bannerHeading: "Weaving Efficiency Into Every Thread",
+        des: "Our intelligent systems enhance fabric quality, production speed, and resource optimization—making textile manufacturing smarter and more sustainable.",
+        banner: textile_banner
+
+    },
+    {
+        name: "Sugar",
+        img: sugar,
+        bannerHeading: "Refining Processes, Elevating Yields",
+        des: "We empower sugar mills with high-performance solutions that reduce energy use, minimize losses, and enhance overall productivity.",
+        banner:sugar_banner
+
+    },
+    {
+        name: "Paper & Pulp",
+        img: paperpulp,
+        bannerHeading: "Engineering Efficiency from Pulp to Paper",
+        des: "Our automation and energy management systems bring greater consistency, lower emissions, and cost savings to every stage of paper production.",
+        banner: paperpulp_banner
+
     }
 ]
 export default function IndustryHelper() {
@@ -83,23 +133,23 @@ export default function IndustryHelper() {
     const [subType, setSubType] = useState("Coal and mining");
 
     return <main className="w-full   ">
-        <section className="w-full mb-10 px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] border-b border-[#7F848D] pb-10  flex-wrap mt-[35px] sm:mt-[40px] md:mt-[50px] max-w-[1350px] mx-auto  flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
+        <section className="w-full mb-10 px-4    border-b border-[#7F848D] pb-10  flex-wrap mt-[35px] sm:mt-[40px] md:mt-[50px] max-w-[1950px] mx-auto  flex justify-center items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 ">
             {
                 IndustryTypes?.map((data: Record<string, any>, index: number) => {
-                    return <section key={index} className="flex flex-col justify-start items-center flex-shrink-0 gap-5">
+                    return <section key={index} className="flex lg:w-[105px] md:w-[95px] w-[85px] flex-col justify-start items-center flex-shrink-0  gap-5 ">
                         <aside onClick={() => {
 
                             setSubType(index == 0 ? data?.subType[0] : "")
 
                             setProductType(data?.name?.toUpperCase()); setIndustryObject(data)
-                        }} className={`lg:w-[124px] w-[104px] h-[104px]  md:w-[114px] md:h-[114px] p-4 md:p-5 lg:p-6 lg:h-[124px] transition-all duration-500 ease-in-out cursor-pointer  flex justify-center items-center  ${productType == data.name?.toUpperCase() ? "bg-[#0057FF] shadow-md" : "bg-[#F4F9FF] shadow"}  rounded-xl `}>
+                        }} className={`  h-[85px]   md:h-[95px] p-4 md:p-4 lg:p-4 lg:h-[105px] transition-all duration-500 ease-in-out cursor-pointer  flex justify-center items-center  ${productType == data.name?.toUpperCase() ? "bg-[#0057FF] border-[#0057FF] shadow-md" : "bg-[#F4F9FF] border-[#d6e9ff] shadow"} border rounded-xl `}>
                             <img
                                 src={data?.img?.src}
                                 alt={data.name}
                                 className={` ${productType == data.name?.toUpperCase() ? "filter brightness-0 invert sepia saturate-100 hue-rotate-[330deg]" : ""} transition-all duration-500 ease-in-out max-h-full`}
                             />
                         </aside>
-                        <p className={`${productType == data.name?.toUpperCase() ? "" : ""} font-semibold  text-[#323334] text-sm md:text-base`}>{data.name}</p>
+                        <p className={`${productType == data.name?.toUpperCase() ? "" : ""} font-semibold  text-[#323334] text-sm  w-[100%] text-center md:text-base`}>{data.name}</p>
                     </section>
                 })
             }
@@ -140,7 +190,7 @@ export default function IndustryHelper() {
             <h3 className="text-[24px] px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] w-full justify-start flex items-start md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Trusted Partners </h3>
             <aside className="flex justify-center px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
                 {
-                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType?data.subType.includes(subType):true)
+                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType) : true)
                     ).map((data: any, index: number) => {
                         return <aside className="flex w-full max-w-[500px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-[663px] px-5 py-6 md:py-4.5 shadow-md bg-white rounded-lg border border-gray-200  justify-start items-center gap-5 md:gap-4 lg:gap-5 xl:gap-6" key={index}>
                             <img className="w-[80px] rounded-full  object-cover object-top h-[80px]" src={data.img.src} alt={data.heading} />
