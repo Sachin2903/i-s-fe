@@ -69,7 +69,7 @@ export default function SpecialAutomation() {
         </section>
         <section className="flex md:flex-row    px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] flex-col  justify-start pt-8 gap-5 lg:gap-6 xl:gap-7 items-start">
             <aside className="flex  w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
-                <aside className="w-full  flex-col p-6 pt-0 pr-0 mt-2 sm:w-[378] md:w-[329px]  xl:w-[521px]   flex justify-center items-center ">
+                <aside className="w-full  flex-col p-6 md:pt-0 md:pr-0 md:mt-2  sm:w-[378] md:w-[329px]  xl:w-[521px]   flex justify-center items-center ">
                     <img className="max-w-full  object-cover object-top h-full" alt="i&s" src={items?.img[0].src} />
                     <button className="px-12 sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 w-full xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
                 </aside>
