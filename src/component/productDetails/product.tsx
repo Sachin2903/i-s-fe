@@ -81,7 +81,7 @@ export default function ProductsHelper() {
                 transmitters_subType.map((type: any, index: number) => {
                     return <aside key={index} onClick={() => {
                         setSubType(type?.toUpperCase())
-                    }} className={`${subType == type?.toUpperCase() ? "bg-[#0057FF] text-white border-[#0057FF]" : "bg-[#F6FAFF] text-[#0057FF] border-[#0057FF42]"}  transition-all capitalize duration-200 cursor-pointer ease-in-out border max-w-[256px] text-center w-full py-3 font-medium rounded-lg   text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]`}>
+                    }} className={`${subType == type?.toUpperCase() ? "bg-[#0057FF] text-white border-[#0057FF]" : "bg-[#F6FAFF] text-[#0057FF] border-[#0057FF42]"}  transition-all capitalize duration-200 cursor-pointer ease-in-out border max-w-[266px] px-2 text-center w-full py-3 font-medium rounded-lg   text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]`}>
                         {type}
                     </aside>
                 })
