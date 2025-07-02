@@ -24,7 +24,7 @@ export default function Footer() {
                 <Link href="/products?type=FLOW METER"><li className="text-[#7F848D]">Flow meter</li></Link>
             </ul>
             <ul className="flex flex-col text-white justify-start  text-sm md:text-base font-medium items-start gap-2 lg:gap-3">
-                <li>Location</li>
+                <li>Address</li>
                 <li className="text-[#7F848D] max-w-[200px]">30, Mohabewala Industrial Area, Dehradun, Uttarakhand</li>
             </ul>
         </aside>

@@ -1,6 +1,4 @@
 "use client";
-
-import textDesign from "@/assests/landingPage/textDesing.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -37,17 +35,11 @@ const responsive = {
 
 export default function Hero4() {
   return (
-    <section className="w-dvw relative flex justify-start items-center pb-16 flex-col bg-white px-4">
-      <h3 className="text-[24px] mb-10 text-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">
+    <section className="w-dvw  flex justify-start items-center pb-16 flex-col bg-white px-4">
+      <h3 className="text-[24px] relative z-50 mb-10 text-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">
         What{" "}
-        <span className="relative inline-block">
-          <img
-            src={textDesign.src}
-            className="absolute -bottom-1 left-0 w-full"
-            alt="i&s"
-          />
+       
           people
-        </span>{" "}
         all over the world are saying about us
       </h3>
 
@@ -59,13 +51,13 @@ export default function Hero4() {
         arrows={false}
         showDots={true}
         customDot={<CustomDot />}
-        dotListClass="flex justify-center items-center "
-        className="w-full max-w-[1236px]"
+        dotListClass="flex justify-center  items-center "
+        className="w-full relative z-50 max-w-[1236px]"
       >
         {new Array(10).fill(0).map((_, index) => (
           <div
             key={index}
-            className="p-6 mb-10 bg-white border border-[#EBEDF0] mx-2 rounded-xl shadow-md text-center"
+            className="p-6 mb-10 bg-white   border border-[#EBEDF0] mx-2 rounded-xl shadow-md text-center"
           >
             <p className="text-sm text-start text-black font-medium lg:text-base">
               Lorem ipsum dolor sit amet consectetur. Quam libero viverra

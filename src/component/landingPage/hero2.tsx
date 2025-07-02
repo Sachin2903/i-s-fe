@@ -1,4 +1,3 @@
-import textDesign from "@/assests/landingPage/textDesing.png";
 import leftDesing from "@/assests/landingPage/hero2/sectionDesignLeft.png";
 import rightDesing from "@/assests/landingPage/hero2/sectionDesignRight.png";
 import { TiArrowRight } from "react-icons/ti";
@@ -45,7 +44,7 @@ export default function Hero2() {
     return <section className="w-dvw relative  flex justify-start items-center sm:py-10 py-8 md:py-12 lg:py-14 xl:py-16 flex-col bg-white">
         <img className="absolute z-10 w-[200px] sm:[210px] md:w-[230px] lg:w-[250px] xl:w-[280px] left-0 top-1/3" src={leftDesing.src} alt="i&s" />
         <img className="absolute z-10 w-[200px] sm:[210px] md:w-[230px] lg:w-[250px] xl:w-[280px] right-0 bottom-0" src={rightDesing.src} alt="i&s" />
-        <h2 id="product_category" className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our <span className="relative"><img src={textDesign.src} className="absolute -bottom-2.5 left-0 w-full" alt="text_design" />Products</span> Category</h2>
+        <h2 id="product_category" className="text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Products Category</h2>
         <section className="w-full flex sm:py-10 py-8 md:py-12 lg:py-14 xl:py-16 flex-wrap justify-center items-center gap-6 ">
             {
                 categoryArray.map((data: any, index: number) => {
