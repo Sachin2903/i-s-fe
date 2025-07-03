@@ -116,7 +116,7 @@ export default function ProductDetailsHelper({ product }: any) {
                 <p className="text-[#7F848D] border-b-4 border-black cursor-pointer px-[5%] md:px-8 py-1.5 font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">Brochures</p>
 
             </aside>
-            <aside className="w-full flex justify-start items-center  py-5 sm:py-8 px-3 sm:px-6">
+            <aside className="w-full gap-3 md:gap-5 flex justify-start items-center  py-5 sm:py-8 px-3 sm:px-6">
                 {
                     items?.pdf?.map((data: any, index: number) => {
                         return <div
