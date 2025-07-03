@@ -32,3 +32,28 @@
 .infinite-scroll {
   animation: slide 12s linear infinite;
 }
+
+
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+.ribbon {
+  --r: .4em; /* control the ribbon shape (the radius) */
+
+  position: absolute;
+  bottom: 50px;
+  inset-inline: calc(-1*var(--r));
+  text-align: center;
+  line-height: 2.2; 
+  padding: calc(2*var(--r)) .5em 0;
+  border-radius: var(--r);
+  --_g:0/var(--r) calc(2*var(--r)) no-repeat;
+  background: 
+    radial-gradient(100% 50% at right,#0005 98%,#0000 101%) 0    var(--_g),
+    radial-gradient(100% 50% at left ,#0005 98%,#0000 101%) 100% var(--_g),
+    conic-gradient(at var(--r) calc(2*var(--r)),#0000 25%,#0057FF 0)
+     0 0/calc(100% - var(--r)) 100%;
+}

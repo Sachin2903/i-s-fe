@@ -6,7 +6,6 @@ import { IoMdCall, IoMdInformationCircle } from "react-icons/io";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import SendEnquiryModal from "./sendEnquiryModel";
-import PdfViewer from "./pdfViewer";
 
 
 const CustomDot = ({ onClick, ...rest }: any) => {
@@ -65,7 +64,7 @@ export default function ProductDetailsHelper({ product }: any) {
         <section className="flex md:flex-row    px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] flex-col  justify-start pt-8 gap-5 lg:gap-6 xl:gap-7 items-start">
             <aside className="flex w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
                 <aside className="w-full p-6 sm:w-[378] h-[382px] md:w-[329px] md:h-[290px] lg:w-[420px] lg:h-[345px] xl:w-[521px] xl:h-[426px]  flex justify-center items-center ">
-                    <img className="max-w-full object-cover object-top h-full" alt="i&s" src={items?.img[0].src} />
+                    <img className="w-full object-cover object-top " alt="i&s" src={items?.img[0].src} />
                 </aside>
 
                 <aside className="flex gap-2 ml-3 md:ml-4 lg:ml-6 flex-col">
@@ -89,7 +88,7 @@ export default function ProductDetailsHelper({ product }: any) {
                                     className="w-[80px] p-2 h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer"
                                 >
                                     <img
-                                        className="h-full object-cover object-top max-w-full"
+                                        className="object-cover object-top w-full"
                                         alt="i&s"
                                         src={data.src}
                                     />
@@ -112,14 +111,42 @@ export default function ProductDetailsHelper({ product }: any) {
             </aside>
         </section>
 
-        <section className="w-full   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mt-7 md:mt-10 min-h-[350px]">
+        {items?.pdf?.length > 0 && <section className="w-full   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mt-7 md:mt-10 min-h-[350px]">
             <aside className="w-full border-[rgb(127,132,141)] border-b flex justify-start items-center ">
                 <p className="text-[#7F848D] border-b-4 border-black cursor-pointer px-[5%] md:px-8 py-1.5 font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">Brochures</p>
 
             </aside>
-            <PdfViewer />
-        </section>
-        <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
+            <aside className="w-full flex justify-start items-center  py-5 sm:py-8 px-3 sm:px-6">
+                {
+                    items?.pdf?.map((data: any, index: number) => {
+                        return <div
+                            key={index}
+                            onClick={() => {
+                                const link = document.createElement("a");
+                                link.href = data.pdf;
+                                link.download = "";
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            }}
+                            className="relative cursor-pointer w-[164px] sm:w-[184px] md:w-[204px] lg:w-[224px] xl:w-[254px] rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+                        >
+                            <p className="ribbon">Open PDF</p>
+
+                            <img
+                                src={data?.banner}
+                                alt="Download PDF"
+                                className="w-full h-auto rounded-md"
+                            />
+                        </div>
+
+
+
+                    })
+                }
+            </aside>
+        </section>}
+        <p className="text-[#000B1D] mt-7 md:mt-10  px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
         <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
             <Carousel
                 responsive={responsive}

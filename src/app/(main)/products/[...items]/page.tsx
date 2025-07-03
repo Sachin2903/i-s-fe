@@ -27,19 +27,25 @@ export default async function ProductDetails({ params }: any) {
 
   return (
     <main className="w-full mt-[35px] sm:pt-[40px] md:pt-[50px] min-h-dvh">
-      <aside className="flex px-[2%] md:px-[2%] lg:px-[2.5%] xl:px-[3%] font-semibold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] justify-start items-center gap-2">
-        <Link href={`/products?type=${encodeURIComponent(product.type)}`} className="capitalize text-start">
+      <aside className="flex flex-wrap px-3 sm:px-4 md:px-[2%] lg:px-[2.5%] xl:px-[3%] font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] items-center gap-1 sm:gap-2 overflow-auto whitespace-nowrap">
+        <Link
+          href={`/products?type=${encodeURIComponent(product.type)}`}
+          className="capitalize w-fit text-start"
+        >
           {product.type.join(" / ")?.toLowerCase()}
         </Link>
-        {
-          product?.subType?.length>0? <>
+
+        {product?.subType?.length > 0 && (
+          <>
             <IoMdArrowDropright />
-            <p className="text-start capitalize">{product.subType?.join(" / ")?.toLowerCase()}</p>
-          </>:null
-        }
+            <p className="text-start capitalize">{product.subType.join(" / ")?.toLowerCase()}</p>
+          </>
+        )}
+
         <IoMdArrowDropright />
-        <p className="text-start">{product.name}</p>
+        <p className="text-start truncate max-w-[60vw] sm:max-w-[70vw] md:max-w-none">{product.name}</p>
       </aside>
+
       <ProductDetailsHelper product={product} />
     </main>
   );
