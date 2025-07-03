@@ -38,9 +38,11 @@ export default function Humberger() {
                 className={`fixed top-0  w-dvw h-dvh z-[9999] md:hidden transition-all duration-300 ease-in-out ${openMenu ? "right-0" : "-right-[200vw]"
                     }`}
             >
-                <ul className="w-[250px] float-right h-full text-white font-medium text-base flex flex-col items-center justify-start gap-10 pt-[120px] backdrop-blur-lg bg-black/60">
+                <ul className="w-[250px] float-right h-full text-white font-medium text-base flex flex-col items-center justify-start gap-6 pt-[120px] backdrop-blur-lg bg-black/60">
                     <Link href="/"><li>HOME</li></Link>
                     <Link href="/products"><li>PRODUCTS</li></Link>
+                    <Link href="/industry"><li>INDUSTRY</li></Link>
+                    <Link href="/"><li>BLOGS</li></Link>
                     <Link href="/aboutus"><li>ABOUT US</li></Link>
                     <Link href="/contactus"><li>CONTACT US</li></Link>
                 </ul>

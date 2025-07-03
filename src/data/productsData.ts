@@ -14,13 +14,15 @@ import knifeEdge13 from "@/assests/items/13.png";
 import knifeEdge14 from "@/assests/items/14.png";
 import knifeEdge15 from "@/assests/items/15.png";
 import knifeEdge16 from "@/assests/items/16.png";
-import knifeEdge17 from "@/assests/items/17.png";
+import knifeEdge17 from "@/assests/items/Transmitters/Temprature Series (Smart & Non-Smart) [All products under this have to be included in one listing only]/Smart Temprature Transmitter/TT NH 1.jpg";
+import knifeEdge172 from "@/assests/items/Transmitters/Temprature Series (Smart & Non-Smart) [All products under this have to be included in one listing only]/Smart Temprature Transmitter/TT NH.jpg";
+import knifeEdge173 from "@/assests/items/Transmitters/Temprature Series (Smart & Non-Smart) [All products under this have to be included in one listing only]/Smart Temprature Transmitter/TT NH 2.jpg";
 import knifeEdge18 from "@/assests/items/18.png";
 import knifeEdge19 from "@/assests/items/19.png";
 import knifeEdge20 from "@/assests/items/20.png";
 import knifeEdge21 from "@/assests/items/21.png";
 import knifeEdge22 from "@/assests/items/22.png";
-import knifeEdge23 from "@/assests/items/23.png";
+import knifeEdge23 from "@/assests/items/Actuators/Multi‑Turn Intelligent Actuator/12.jpg";
 import knifeEdge24 from "@/assests/items/24.png";
 import knife11 from "@/assests/items/Knife Edge Gate Control Valve/6.jpg"
 import knife12 from "@/assests/items/Knife Edge Gate Control Valve/7.jpg"
@@ -192,6 +194,16 @@ export const allProductsArray = [
         extraDes: "Engineered for accurate measurement of pressure differences in liquids, gases, or steam, this transmitter ensures dependable performance in critical flow and level monitoring applications. With high sensitivity and stability, it is widely used in filtration systems, flow measurement setups, and across various process industries."
     },
     {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad105",
+        type: ["TRANSMITTERS"],
+        subType: ["TEMPERATURE SERIES"],
+        pdf: [{ banner: "/pdf/pdf12_page-0001.jpg", pdf: "/pdf/pdf12.pdf" }],
+        tag: [], img: [knifeEdge18, pressureH2],
+        name: "Head Mount TT 2",
+        des: "Digitally configurable transmitter, DIN rail transmitter and Head Mounted Smart Temprature Transmitter for precise industrial temperature measurement.",
+        extraDes: "Designed for precision and adaptability, our Temperature Transmitters seamlessly integrates with RTDs, thermocouples, and resistance sensors. They offer accurate temperature measurements with digital communication capabilities, including HART protocol, ensuring efficient data transmission and diagnostics. Ideal for diverse industrial applications, these transmitters support easy configuration via PC or handheld devices, enhancing process control and operational efficiency."
+    },
+    {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad103",
         type: ["TRANSMITTERS"],
         subType: ["TEMPERATURE SERIES"],
@@ -206,18 +218,8 @@ export const allProductsArray = [
         type: ["TRANSMITTERS"],
         subType: ["TEMPERATURE SERIES"],
         pdf: [{ banner: "/pdf/pdf12_page-0001.jpg", pdf: "/pdf/pdf12.pdf" }],
-        tag: [], img: [knifeEdge17, pressureH1],
-        name: "Head Mount TT 1",
-        des: "Digitally configurable transmitter, DIN rail transmitter and Head Mounted Smart Temprature Transmitter for precise industrial temperature measurement.",
-        extraDes: "Designed for precision and adaptability, our Temperature Transmitters seamlessly integrates with RTDs, thermocouples, and resistance sensors. They offer accurate temperature measurements with digital communication capabilities, including HART protocol, ensuring efficient data transmission and diagnostics. Ideal for diverse industrial applications, these transmitters support easy configuration via PC or handheld devices, enhancing process control and operational efficiency."
-    },
-    {
-        id: "73aac12f-0766-4e37-84c1-f02d8e07ad105",
-        type: ["TRANSMITTERS"],
-        subType: ["TEMPERATURE SERIES"],
-        pdf: [{ banner: "/pdf/pdf12_page-0001.jpg", pdf: "/pdf/pdf12.pdf" }],
-        tag: [], img: [knifeEdge18, pressureH2],
-        name: "Head Mount TT 2",
+        tag: [], img: [knifeEdge17, knifeEdge172, knifeEdge173],
+        name: "Smart Temperature Transmitters",
         des: "Digitally configurable transmitter, DIN rail transmitter and Head Mounted Smart Temprature Transmitter for precise industrial temperature measurement.",
         extraDes: "Designed for precision and adaptability, our Temperature Transmitters seamlessly integrates with RTDs, thermocouples, and resistance sensors. They offer accurate temperature measurements with digital communication capabilities, including HART protocol, ensuring efficient data transmission and diagnostics. Ideal for diverse industrial applications, these transmitters support easy configuration via PC or handheld devices, enhancing process control and operational efficiency."
     },
@@ -277,7 +279,7 @@ export const allProductsArray = [
         type: ["TRANSMITTERS", "FLOW METER"],
         subType: ["FLOW METER"],
         extraType: ["FLOW SERIES"],
-                pdf: [{ banner: "/pdf/pdf18_page-0001.jpg", pdf: "/pdf/pdf18.pdf" }],
+        pdf: [{ banner: "/pdf/pdf18_page-0001.jpg", pdf: "/pdf/pdf18.pdf" }],
 
         tag: [], img: [knifeEdge19, flow1, flow2, flow3],
         name: "Electromagnetic Flow Meter",
@@ -288,7 +290,7 @@ export const allProductsArray = [
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad107",
         type: ["TRANSMITTERS", "FLOW METER"],
         subType: ["FLOW METER"],
-                pdf: [{ banner: "/pdf/pdf19_page-0001.jpg", pdf: "/pdf/pdf19.pdf" }],
+        pdf: [{ banner: "/pdf/pdf19_page-0001.jpg", pdf: "/pdf/pdf19.pdf" }],
 
         extraType: ["FLOW SERIES"],
         tag: [], img: [knifeEdge20, flow11],
@@ -301,7 +303,7 @@ export const allProductsArray = [
         type: ["TRANSMITTERS"],
         subType: ["FLOW METER"],
         extraType: ["REMOTE SEAL SERIES"],
-                pdf: [{ banner: "/pdf/pdf20_page-0001.jpg", pdf: "/pdf/pdf20.pdf" }],
+        pdf: [{ banner: "/pdf/pdf20_page-0001.jpg", pdf: "/pdf/pdf20.pdf" }],
 
         tag: [], img: [knifeEdge7, trnas21, trnas22, trnas23],
         name: "Pressure Transmitter with Remote Seal and Capillary",
@@ -313,7 +315,7 @@ export const allProductsArray = [
         type: ["TRANSMITTERS"],
         subType: ["FLOW METER"],
         extraType: ["REMOTE SEAL SERIES"],
-                pdf: [{ banner: "/pdf/pdf21_page-0001.jpg", pdf: "/pdf/pdf21.pdf" }],
+        pdf: [{ banner: "/pdf/pdf21_page-0001.jpg", pdf: "/pdf/pdf21.pdf" }],
 
         tag: [], img: [knifeEdge6, trans1, trans2, trans3, trans4],
         name: "Differential Pressure Transmitter with Remote Seal and Capillary",
@@ -321,7 +323,15 @@ export const allProductsArray = [
         extraDes: "Designed for accurate differential pressure measurement in challenging process conditions, this transmitter features remote diaphragm seals connected via fluid-filled capillary tubes. This configuration isolates the sensing element from corrosive, high-temperature, or viscous media, ensuring reliable performance and extended service life. Ideal for applications in industries such as chemical processing, oil and gas, and food and beverage, it provides dependable readings even in environments where direct sensor contact is impractical."
     },
 
-
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad109",
+        type: ["MOTORIZED ACTUATORS"],
+        subType: [{ banner: "/pdf/pdf2banner.jpg", pdf: "/pdf/pdf2.pdf" }],
+        name: "Quarter-Turn Actuator",
+        tag: ["Water Automation"], img: [knifeEdge22, Actuators1],
+        des: "Fast, durable quarter-turn actuator offering high-torque, modular mounting, and configurable feedback for precise valve control.",
+        extraDes: "Engineered for swift and reliable valve operation, our Quarter-Turn Actuator is designed for valves such as butterfly, ball, and plug types that require a 90° rotation. Available in electric or pneumatic versions. This actuator is ideal for automation of critical on/off and modulating valve duties, offering secure integration with DCS/SCADA systems and seamless field operations. "
+    },
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad110",
         type: ["MOTORIZED ACTUATORS"],
@@ -331,15 +341,6 @@ export const allProductsArray = [
         tag: ["Water Automation"], img: [knifeEdge23, Actuators21],
         des: "Robust, intelligent actuator delivering high-torque, precision-controlled valve automation with non-intrusive setup and smart diagnostics.",
         extraDes: "Precision meets power in our Multi-Turn Intelligent Actuator, built to deliver reliable, automated valve control with unmatched flexibility. Designed for multi-turn applications, like gate, globe, and diaphragm valves. Ideal for integration into complex control systems, this actuator supports HMI interfaces, DCS/PLC connectivity, and firmware updates for future-ready operation."
-    },
-    {
-        id: "73aac12f-0766-4e37-84c1-f02d8e07ad109",
-        type: ["MOTORIZED ACTUATORS"],
-        subType: [{ banner: "/pdf/pdf2banner.jpg", pdf: "/pdf/pdf2.pdf" }],
-        name: "Quarter-Turn Actuator",
-        tag: ["Water Automation"], img: [knifeEdge22, Actuators1],
-        des: "Fast, durable quarter-turn actuator offering high-torque, modular mounting, and configurable feedback for precise valve control.",
-        extraDes: "Engineered for swift and reliable valve operation, our Quarter-Turn Actuator is designed for valves such as butterfly, ball, and plug types that require a 90° rotation. Available in electric or pneumatic versions. This actuator is ideal for automation of critical on/off and modulating valve duties, offering secure integration with DCS/SCADA systems and seamless field operations. "
     },
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad108",
