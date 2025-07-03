@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import { MdMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
@@ -38,10 +39,10 @@ export default function Humberger() {
                     }`}
             >
                 <ul className="w-[250px] float-right h-full text-white font-medium text-base flex flex-col items-center justify-start gap-10 pt-[120px] backdrop-blur-lg bg-black/60">
-                    <li>HOME</li>
-                    <li>PRODUCTS</li>
-                    <li>ABOUT US</li>
-                    <li>CONTACT US</li>
+                    <Link href="/"><li>HOME</li></Link>
+                    <Link href="/products"><li>PRODUCTS</li></Link>
+                    <Link href="/aboutus"><li>ABOUT US</li></Link>
+                    <Link href="/contactus"><li>CONTACT US</li></Link>
                 </ul>
             </aside>
         </>

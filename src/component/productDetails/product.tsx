@@ -11,6 +11,7 @@ import { useSearchParams } from "next/navigation";
 import { allProductsArray } from "@/data/productsData";
 import Link from "next/link";
 import SpecialAutomation from "./specialAutomation";
+import linear from "@/assests/products/linear.png"
 
 const productTypes = [
     {
@@ -48,6 +49,12 @@ const productTypes = [
         img: flow,
         special_heading: "iP Trans"
 
+    },
+    {
+        name: "Linear Power Cylinder",
+        img: linear,
+        special_heading: ""
+
     }
 ]
 
@@ -59,7 +66,7 @@ export default function ProductsHelper() {
     const [subType, setSubType] = useState("PRESSURE SERIES");
 
     return <main className="w-full   min-h-dvh ">
-        <section className="w-full  px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  mb-10  border-b border-[#7F848D] pb-10  flex-wrap mt-[15px] sm:mt-[20px] md:mt-[30px] max-w-[1350px] mx-auto  flex justify-center items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-14">
+        <section className="w-full  px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  mb-10  border-b border-[#7F848D] pb-10  flex-wrap mt-[15px] sm:mt-[20px] md:mt-[30px] max-w-[1350px] mx-auto  flex justify-center items-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-8">
             {
                 productTypes?.map((data: Record<string, any>, index: number) => {
                     return <section key={index} className="flex flex-col justify-start items-center flex-shrink-0 gap-2">
@@ -76,7 +83,7 @@ export default function ProductsHelper() {
                 })
             }
         </section>
-        {productType=="TRANSMITTERS"&&<section className="mb-10 px-[2%]   flex justify-center items-center gap-5  md:px-[2%] lg:px-[2.5%] xl:px-[3%]">
+        {productType == "TRANSMITTERS" && <section className="mb-10 px-[2%]   flex justify-center items-center gap-5  md:px-[2%] lg:px-[2.5%] xl:px-[3%]">
             {
                 transmitters_subType.map((type: any, index: number) => {
                     return <aside key={index} onClick={() => {
@@ -87,9 +94,9 @@ export default function ProductsHelper() {
                 })
             }
         </section>}
-        {productType=="AUTOMATION"?<SpecialAutomation/>:<section className="w-fullpx-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  flex justify-center gap-5 flex-wrap pb-18 items-center">
+        {productType == "AUTOMATION" ? <SpecialAutomation /> : <section className="w-fullpx-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  flex justify-center gap-5 flex-wrap pb-18 items-center">
             {
-                allProductsArray.filter((data: Record<string, any>) => productType=="TRANSMITTERS" ? data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
+                allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
                     return <Link className="border sm:w-[275px] w-[215px] md:w-[285px] lg:w-[295px] xl:w-[315px] rounded-lg p-4 border-[#EBEDF0] shadow-md group" key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}>
                         <div className="w-full relative shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
                             <img className="max-w-full h-[85%]" src={data?.img?.[0]?.src} alt="i&s" />

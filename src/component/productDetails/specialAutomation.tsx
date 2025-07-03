@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoMdCall, IoMdInformationCircle } from "react-icons/io";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import SendEnquiryModal from "./sendEnquiryModel";
 
 const responsive = {
     superLargeDesktop: {
@@ -53,8 +54,10 @@ const CustomDot = ({ onClick, ...rest }: any) => {
 export default function SpecialAutomation() {
     const [subType, setSubType] = useState("SUGAR AUTOMATION");
     const [items, setItems] = useState(automationProductArray[0]);
-
+    const [openModel,setOpenModel]=useState(false)
     return <section className="w-full    min-h-dvh ">
+        {openModel && <SendEnquiryModal addProductName={true} name={`${items?.name}`} onClose={() => setOpenModel(false)} />}
+
         <section className="mb-10 px-[2%] flex justify-center items-center gap-5  md:px-[2%] lg:px-[2.5%] xl:px-[3%]">
             {
                 automation_subType.map((type: any, index: number) => {
@@ -71,7 +74,7 @@ export default function SpecialAutomation() {
             <aside className="flex  w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
                 <aside className="w-full  flex-col p-6 md:pt-0 md:pr-0 md:mt-2  sm:w-[378] md:w-[329px]  xl:w-[521px]   flex justify-center items-center ">
                     <img className="max-w-full  object-cover object-top h-full" alt="i&s" src={items?.img[0].src} />
-                    <button className="px-12 sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 w-full xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
+                    <button onClick={() => setOpenModel(true)} className="px-12 sm:px-14 cursor-pointer md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 w-full xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
                 </aside>
             </aside>
             <aside className="flex gap-1 md:border-l min-h-[382px] md:min-h-[290px lg:min-h-[345px] xl:min-h-[426px]  md:pl-4 lg:pl-6 md:border-[#c7cacf] max-w-[940px]  flex-col  justify-start items-start">
@@ -86,8 +89,8 @@ export default function SpecialAutomation() {
                 </ul>
                 <p className="text-black mt-3  font-semibold text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] ">{items.objTitle}</p>
                 {
-                    items.obj.map((data:any)=>{
-                        return                 <p className="text-[#7F848D]  f text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] "><span className="text-[#202122] font-medium">{data.head}</span> &nbsp; {data.des}</p>
+                    items.obj.map((data: any, index: number) => {
+                        return <p key={index} className="text-[#7F848D]  f text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] "><span className="text-[#202122] font-medium">{data.head}</span> &nbsp; {data.des}</p>
                     })
                 }
 

@@ -12,8 +12,8 @@ export default function Footer() {
             <ul className="flex flex-shrink-0 flex-col text-white justify-start  text-sm md:text-base font-medium items-start gap-2 lg:gap-3">
                 <Link href="/"><li>HOME</li></Link>
                 <Link href="/products"><li>PRODUCTS</li></Link>
-                <Link href="#i&sfotter"><li>ABOUT US</li></Link>
-                <Link href="#i&sfotter"><li>CONTACT US</li></Link>
+                <Link href="/aboutus"><li>ABOUT US</li></Link>
+                <Link href="/contactus"><li>CONTACT US</li></Link>
             </ul>
             <ul className="flex flex-shrink-0 flex-col text-white justify-start  text-sm md:text-base font-medium items-start gap-2 lg:gap-3">
                 <li>Product Category</li>

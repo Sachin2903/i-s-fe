@@ -9,8 +9,8 @@ export default function Navbar({color}:{color:boolean}) {
         <ul className="hidden md:flex text-white justify-center  text-sm md:text-base font-medium items-center gap-5 md:gap-6 lg:gap-8 xl:gap-12">
             <Link href="/"><li>HOME</li></Link>
             <Link href="/products"><li>PRODUCTS</li></Link>
-            <Link href="#i&sfotter"><li>ABOUT US</li></Link>
-            <Link href="#i&sfotter"><li>CONTACT US</li></Link>
+            <Link href="/aboutus"><li>ABOUT US</li></Link>
+            <Link href="/contactus"><li>CONTACT US</li></Link>
             {/* <aside className="w-[220px] lg:w-[270px] xl:w-[300px] h-[36px] border px-3 border-white/60 text-gray-100 flex justify-between items-center  rounded-full">
                 <input className=" outline-none w-full font-normal h-full px-2  py-1" />
                 <CiSearch className="text-2xl " />

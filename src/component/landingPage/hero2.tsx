@@ -8,35 +8,48 @@ import transmitters from "@/assests/products/transmitters.png";
 import automation from "@/assests/products/automation.png";
 import motorized from "@/assests/products/actuators.png";
 import Link from "next/link";
+import linear from "@/assests/products/linear.png"
 const categoryArray = [
     {
         name: "Control Valves",
         img: valves,
+        class: "h-full",
         des: "Precisely regulate flow, pressure, and temperature in critical process systems.",
         count: 60
     },
     {
         name: "Transmitters",
         img: transmitters,
+        class: "h-full",
         des: "Deliver accurate and real-time process data with high-sensitivity transmitters.",
         count: 70
     },
     {
         name: "Automation",
         img: automation,
+        class: "h-full",
         des: "Smart automation enhances productivity, safety, and consistency.",
         count: 20
     },
     {
         name: "Motorized Autuators",
         img: motorized,
+        class: "h-full",
         des: "Motorized actuators provide reliable motion control for valves and systems.",
         count: 40
     },
     {
         name: "Flow Meter",
+        class: "h-full scale-[1.5]",
         img: flow,
         des: "Achieve accurate flow measurement for liquids and gases in real time.",
+        count: 50
+    },
+    {
+        name: "Linear Power Cylinder",
+        class: "h-full scale-[1.5]",
+        img: linear,
+        des: "Linear Power Cylinder are widely used for accurately and positively.",
         count: 50
     }
 ]
@@ -51,7 +64,7 @@ export default function Hero2() {
                     return <Link
                         key={index}
                         href={`/products?type=${data.name?.toUpperCase()}`}
-                        className="group flex flex-col justify-start items-center relative bg-white z-30 w-[365px] p-[4%] md:p-[2%] py-[3%] md:py-[1.4%] lg:w-[390px] xl:w-[415px] flex-shrink-0 rounded-xl border border-gray-200 shadow-md hover:bg-[#0057FF] transition-all duration-300"
+                        className="group flex group flex-col justify-start items-center relative bg-white z-30 w-[365px] p-[4%] md:p-[2%] py-[3%] md:py-[1.4%] lg:w-[390px] xl:w-[415px] flex-shrink-0 rounded-xl border border-gray-200 shadow-md hover:bg-[#0057FF] transition-all duration-300"
                     >
                         <p className=" text-[20px] md:text-[24px] lg:text-[28px] self-end xl:text-[32px] bg-[#F5F8FF] p-2 md:p-3 w-fit rounded-xl text-[#0057FF] font-semibold">
                             {data.count}+
@@ -59,7 +72,7 @@ export default function Hero2() {
                         <aside
                             className={`md:h-[120px] ${index > 2 ? "p-5 sm:p-6" : "p-2"} flex justify-center items-center self-start h-[95px] lg:h-[145hpx]`}
                         >
-                            <img className="h-full" src={data.img.src} alt="i&s" />
+                            <img className={`${data.class} group-hover:saturate-100 group-hover:invert group-hover:sepia group-hover:filter group-hover:brightness-0`} src={data.img.src} alt="i&s" />
                         </aside>
                         <h3 className="group-hover:text-white text-[20px] mt-2 self-start md:text-[22px] lg:text-[26px] xl:text-[30px] font-semibold">
                             {data.name}

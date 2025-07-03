@@ -106,6 +106,7 @@ import electronic2 from "@/assests/items/Electro Pnuematic Positioner/11.jpg"
 import electronic3 from "@/assests/items/Electro Pnuematic Positioner/8.jpg"
 
 
+
 export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad91",
@@ -300,6 +301,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad110",
         type: ["MOTORIZED ACTUATORS"],
+        pdf:["/pdf/pdf1.pdf"],
         subType: [],
         name: "Multi-Turn Intelligent Actuator",
         tag: ["Water Automation"], img: [knifeEdge23, Actuators21],
@@ -315,6 +317,14 @@ export const allProductsArray = [
         des: "Fast, durable quarter-turn actuator offering high-torque, modular mounting, and configurable feedback for precise valve control.",
         extraDes: "Engineered for swift and reliable valve operation, our Quarter-Turn Actuator is designed for valves such as butterfly, ball, and plug types that require a 90° rotation. Available in electric or pneumatic versions. This actuator is ideal for automation of critical on/off and modulating valve duties, offering secure integration with DCS/SCADA systems and seamless field operations. "
     },
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad108",
+        type: ["LINEAR POWER CYLINDER"],
+        name: "Linear Power Cylinder",
+        tag: [], img: [knifeEdge21, Automation1, Automation2, Automation3],
+        des: "High-force linear actuator offering modular on/off or modulating control, compact installation, and durable performance for critical valve systems.",
+        extraDes: "Engineered for precision straight-line power, our Linear Power Cylinder delivers robust actuation for heavy-duty valve control. Designed for on-off and positioning duties, it offers a direct, non-rotational stroke ideal for gates, globe valves, and dampers. Ideal for heavy-duty and critical applications in power generation (windbox), process industries, water treatment, and more, especially where large linear force and reliability are essential."
+    },
 ]
 // {
 //     id: "73aac12f-0766-4e37-84c1-f02d8e07ad111",
@@ -323,16 +333,6 @@ export const allProductsArray = [
 //     tag:[],img: [knifeEdge24, electronic1, electronic2, electronic3],
 //     des: "Actuators",
 //     extraDes:""
-// },
-
-// {
-//     id: "73aac12f-0766-4e37-84c1-f02d8e07ad108",
-//     type: ["LINEAR POWER CYLINDER"],
-//     name: "Linear Power Cylinder",
-//     tag:[],img: [knifeEdge21, Automation1, Automation2, Automation3],
-//     des: "High-force linear actuator offering modular on/off or modulating control, compact installation, and durable performance for critical valve systems.",
-// extraDes:"Engineered for precision straight-line power, our Linear Power Cylinder delivers robust actuation for heavy-duty valve control. Designed for on-off and positioning duties, it offers a direct, non-rotational stroke ideal for gates, globe valves, and dampers. Ideal for heavy-duty and critical applications in power generation (windbox), process industries, water treatment, and more, especially where large linear force and reliability are essential."
-
 // },
 
 import sugar from "@/assests/items/Automation/sugar.png"
@@ -346,10 +346,10 @@ export const automationProductArray = [
         name: "Automation for Sugar Industry",
         des: "Unplanned shutdowns and off-spec batches are killing your margins. Manual oversight can't match the precision modern sugar processing demands.",
         desHeightlight: "Instruments & Systems: 40+ years delivering automation projects across India's sugar belt.",
-        compHead:"Complete Process Coverage",
+        compHead: "Complete Process Coverage",
         compleDes: "We provide complete instrumentation and automation solutions for:",
         points: ["Falling Film Evaporators", "Direct Contact Heaters", "Condensate Flashing Systems", "Condensers", "Condensate Flashing Systems", "Carbonatation Systems", "Cascade Continuous Pans", "Sugar Driers (Rotary & Fluidized Bed)"],
-        objTitle:"Sugar Driers (Rotary & Fluidized Bed)",
+        objTitle: "Sugar Driers (Rotary & Fluidized Bed)",
         obj: [
             {
                 head: "Precise Process Control:",
@@ -368,8 +368,8 @@ export const automationProductArray = [
                 des: "Design, installation, commissioning, and ongoing maintenance handled by our engineering team."
             }
         ],
-        bannerHead:"Ready to Eliminate Process Variability?",
-        bannerDes:"Quick consultation to identify your highest-impact automation opportunities - no plant disruption required."
+        bannerHead: "Ready to Eliminate Process Variability?",
+        bannerDes: "Quick consultation to identify your highest-impact automation opportunities - no plant disruption required."
 
     },
     {
@@ -378,12 +378,12 @@ export const automationProductArray = [
         subType: [],
         tag: [], img: [water],
         name: "Automation for the Water and Wastewater Industry",
-        des:"Urban water demand is rising while environmental regulations tighten. Your water and wastewater systems need precision control to meet both challenges. Instruments & Systems delivers intelligent water automation solutions that drive efficiency, monitoring, and regulatory compliance across industrial and municipal networks. ",
+        des: "Urban water demand is rising while environmental regulations tighten. Your water and wastewater systems need precision control to meet both challenges. Instruments & Systems delivers intelligent water automation solutions that drive efficiency, monitoring, and regulatory compliance across industrial and municipal networks. ",
         desHeightlight: "",
-        compHead:"Where We Work",
+        compHead: "Where We Work",
         compleDes: "",
-        points: ["Water Treatment Plants (WTP)","Smart City Water Grids","Sewage Treatment Plants (STP)","Industrial Process Water Management","Effluent Treatment Plants (ETP)","Urban Water Distribution & Metering Zones"],
-        objTitle:"Urban Water Distribution & Metering Zones",
+        points: ["Water Treatment Plants (WTP)", "Smart City Water Grids", "Sewage Treatment Plants (STP)", "Industrial Process Water Management", "Effluent Treatment Plants (ETP)", "Urban Water Distribution & Metering Zones"],
+        objTitle: "Urban Water Distribution & Metering Zones",
         obj: [
             {
                 head: "Smart Instrumentation:",
@@ -398,8 +398,8 @@ export const automationProductArray = [
                 des: "PLC & SCADA panels with IoT-ready monitoring and remote-controlled valve stations."
             }
         ],
-        bannerHead:"What Our Systems Deliver ?",
-        bannerDes:"Real-time pressure and flow management across your network. Automated leakage detection with zone isolation capabilities. Remote diagnostics and control via SCADA systems. Level control in storage tanks and reservoirs. Automated pump sequencing with safety interlocks. Data logging for billing and audit compliance."
+        bannerHead: "What Our Systems Deliver ?",
+        bannerDes: "Real-time pressure and flow management across your network. Automated leakage detection with zone isolation capabilities. Remote diagnostics and control via SCADA systems. Level control in storage tanks and reservoirs. Automated pump sequencing with safety interlocks. Data logging for billing and audit compliance."
 
     },
 ]
