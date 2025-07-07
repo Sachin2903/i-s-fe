@@ -208,7 +208,7 @@ export default function IndustryHelper() {
 
                                 {data.img&&<img
                                     onError={(e: any) => (e.target.style.display = "hidden")}
-                                    className="w-full h-full rounded-full object-cover object-top"
+                                    className="w-full h-full rounded-full object-fill bg-gray-200 object-top"
                                     src={data.img.src}
                                     alt={data.heading}
                                 />}

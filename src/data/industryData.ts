@@ -2,6 +2,9 @@ import power1 from "@/assests/industry/industry/power1.png";
 import power2 from "@/assests/industry/industry/power2.png";
 import power3 from "@/assests/industry/industry/power3.png";
 import power4 from "@/assests/industry/industry/power4.png";
+import power5 from "@/assests/industry/industry/power5.png";
+import power6 from "@/assests/industry/industry/power6.png";
+import power7 from "@/assests/industry/industry/power7.jpeg";
 
 import oil1 from "@/assests/industry/industry/oil1.png";
 import oil2 from "@/assests/industry/industry/oil2.png";
@@ -91,34 +94,27 @@ export const IndustryDataArray = [
         type: ["POWER PLANT"],
         subType: ["Nuclear"]
     },
-    // {
-    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
-    //     des: "Nuclear Sector",
-    //     img: power4,
-    //     type: ["POWER PLANT"],
-    //     subType: ["Nuclear"]
-    // },
-    // {
-    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
-    //     des: "Nuclear Sector",
-    //     img: power4,
-    //     type: ["POWER PLANT"],
-    //     subType: ["Nuclear"]
-    // },
-    // {
-    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
-    //     des: "Nuclear Sector",
-    //     img: power4,
-    //     type: ["POWER PLANT"],
-    //     subType: ["Nuclear"]
-    // },
-    // {
-    //     name: "Gas Authority Of India Limited - GAIL",
-    //     des: "Oil & Gas Industry",
-    //     img: oil1,
-    //     type: ["OIL & GAS"],
-    //     subType: []
-    // },
+    {
+        name: "UCIL (Nuclear Power)",
+        des: "Nuclear Sector",
+        img: power5,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
+    },
+    {
+        name: "BARC (Nuclear Power)",
+        des: "Nuclear Sector",
+        img: power6,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
+    },
+    {
+        name: "IREL (Nuclear Power)",
+        des: "Nuclear Sector",
+        img: power7,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
+    },
     {
         name: "Indian Oil Corporation Limited- IOCL",
         des: "Oil & Gas Industry",
