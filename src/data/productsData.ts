@@ -235,7 +235,7 @@ export const allProductsArray = [
         subType: ["LEVEL SERIES"],
         extraType: ["CONTACT TYPE"],
         pdf: [{ banner: "/pdf/pdf13_page-0001.jpg", pdf: "/pdf/pdf13.pdf" }],
-        tag: [], img: [knifeEdge12, level51, level52, level53, level54],
+        tag: [], img: [knifeEdge12, level53, level54],
         name: "PT Type Hydrostatic Level Transmitter",
         des: "Reliable level measurement based on hydrostatic pressure for liquid storage.",
         extraDes: "Designed for accurate and reliable liquid level measurement, the PT-Type Hydrostatic Level Transmitter operates on the principle of hydrostatic pressure. By sensing the pressure exerted by the liquid column, it provides continuous level readings, making it ideal for applications in water treatment, chemical processing, and storage tanks. Its robust construction ensures durability and consistent performance in various industrial environments."
