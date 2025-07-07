@@ -54,7 +54,7 @@ const CustomDot = ({ onClick, ...rest }: any) => {
 export default function SpecialAutomation() {
     const [subType, setSubType] = useState("SUGAR AUTOMATION");
     const [items, setItems] = useState(automationProductArray[0]);
-    const [openModel,setOpenModel]=useState(false)
+    const [openModel, setOpenModel] = useState(false)
     return <section className="w-full    min-h-dvh ">
         {openModel && <SendEnquiryModal addProductName={true} name={`${items?.name}`} onClose={() => setOpenModel(false)} />}
 
@@ -108,40 +108,42 @@ export default function SpecialAutomation() {
 
 
 
+        {subType=="Water Automation"&&<>
 
-        <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
-        <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
-            <Carousel
-                responsive={responsive}
-                infinite
-                autoPlay
-                arrows={false}
-                autoPlaySpeed={3000}
-                showDots={true}
-                customDot={<CustomDot />}
-                dotListClass="flex justify-center items-center "
-                className="w-full  "
-                draggable={true}
-            // customLeftArrow={<CustomLeftArrow />}
-            // customRightArrow={<CustomRightArrow />}
+            <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
+            <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
+                <Carousel
+                    responsive={responsive}
+                    infinite
+                    autoPlay
+                    arrows={false}
+                    autoPlaySpeed={3000}
+                    showDots={true}
+                    customDot={<CustomDot />}
+                    dotListClass="flex justify-center items-center "
+                    className="w-full  "
+                    draggable={true}
+                // customLeftArrow={<CustomLeftArrow />}
+                // customRightArrow={<CustomRightArrow />}
 
-            >
+                >
 
-                {
-                    allProductsArray.filter((data: any) => data?.tag?.includes("Water Automation")).map((data: Record<string, any>, index: number) => {
-                        return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
-                            <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                                <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
-                                <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
-                            </div>
-                            <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
-                            <p className="text-[12px] line-clamp-2 min-h-[40px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">{data.des}</p>
-                            <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                        </aside></Link>
-                    })
-                }
-            </Carousel>
-        </section>
+                    {
+                        allProductsArray.filter((data: any) => data?.tag?.includes("Water Automation")).map((data: Record<string, any>, index: number) => {
+                            return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
+                                <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
+                                    <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
+                                    <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
+                                </div>
+                                <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
+                                <p className="text-[12px] line-clamp-2 min-h-[40px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">{data.des}</p>
+                                <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
+                            </aside></Link>
+                        })
+                    }
+                </Carousel>
+            </section>
+        </>}
 
     </section>
 }
