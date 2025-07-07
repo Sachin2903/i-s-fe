@@ -52,7 +52,7 @@ const CustomDot = ({ onClick, ...rest }: any) => {
     );
 };
 export default function SpecialAutomation() {
-    const [subType, setSubType] = useState("SUGAR AUTOMATION");
+    const [subType, setSubType] = useState<any>("SUGAR AUTOMATION");
     const [items, setItems] = useState(automationProductArray[0]);
     const [openModel, setOpenModel] = useState(false)
     return <section className="w-full    min-h-dvh ">
@@ -107,9 +107,6 @@ export default function SpecialAutomation() {
         </aside>
 
 
-
-        {subType=="Water Automation"&&<>
-
             <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
             <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
                 <Carousel
@@ -129,7 +126,7 @@ export default function SpecialAutomation() {
                 >
 
                     {
-                        allProductsArray.filter((data: any) => data?.tag?.includes("Water Automation")).map((data: Record<string, any>, index: number) => {
+                        allProductsArray.filter((data: any) => data?.tag?.includes(subType!=="SUGAR AUTOMATION"?"Water Automation":"Sugar Automation")).map((data: Record<string, any>, index: number) => {
                             return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
                                 <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
                                     <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
@@ -143,7 +140,6 @@ export default function SpecialAutomation() {
                     }
                 </Carousel>
             </section>
-        </>}
 
     </section>
 }

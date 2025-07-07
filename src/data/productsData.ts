@@ -107,6 +107,12 @@ import electronic1 from "@/assests/items/Electro Pnuematic Positioner/10.jpg"
 import electronic2 from "@/assests/items/Electro Pnuematic Positioner/11.jpg"
 import electronic3 from "@/assests/items/Electro Pnuematic Positioner/8.jpg"
 
+import sugar1 from "@/assests/items/sugar images/sugar1 .png"
+import sugar2 from "@/assests/items/sugar images/sugar2.png"
+import sugar3 from "@/assests/items/sugar images/sugar3.png"
+import sugar4 from "@/assests/items/sugar images/sugar5.png"
+
+
 
 
 export const allProductsArray = [
@@ -355,6 +361,52 @@ export const allProductsArray = [
         tag: [], img: [knifeEdge21, Automation1, Automation2, Automation3],
         des: "High-force linear actuator offering modular on/off or modulating control, compact installation, and durable performance for critical valve systems.",
         extraDes: "Engineered for precision straight-line power, our Linear Power Cylinder delivers robust actuation for heavy-duty valve control. Designed for on-off and positioning duties, it offers a direct, non-rotational stroke ideal for gates, globe valves, and dampers. Ideal for heavy-duty and critical applications in power generation (windbox), process industries, water treatment, and more, especially where large linear force and reliability are essential."
+    },
+
+
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad991",
+        type: [],
+        subType: [],
+        extraType: [],
+        pdf: [],
+        tag: ["Sugar Automation"], img: [sugar1],
+        name: "Automated Condenser",
+        des: "",
+        extraDes: ""
+    },
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad994",
+        type: [],
+        subType: [],
+        extraType: [],
+        pdf: [],
+        tag: ["Sugar Automation"], img: [sugar2],
+        name: "Brix Reference Transmitter",
+        des: "BRIX reference measurement Auto feed control System works based on multi set point’s microprocessor. This system Measures and control BRIX Reference",
+        extraDes: "Instruments & system has done successful Installations so far in various sugar factories in INDIA."
+    },
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad9912",
+        type: [],
+        subType: [],
+        extraType: [],
+        pdf: [],
+        tag: ["Sugar Automation"], img: [sugar3],
+        name: "Lime Dosing Unit",
+        des: "",
+        extraDes: ""
+    },
+    {
+        id: "73aac12f-0766-4e37-84c1-f02d8e07ad9913",
+        type: [],
+        subType: [],
+        extraType: [],
+        pdf: [],
+        tag: ["Sugar Automation"], img: [sugar4],
+        name: "Temperature Measurement",
+        des: "",
+        extraDes: ""
     },
 ]
 // {
