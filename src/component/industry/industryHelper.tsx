@@ -24,6 +24,9 @@ import distilleries_banner from "@/assests/industry/distillerbanner.png";
 import textile_banner from "@/assests/industry/texttileBanner.png";
 import sugar_banner from "@/assests/industry/sugarBanner.png";
 import paperpulp_banner from "@/assests/industry/paperpulpbanner.png";
+import coalMIningBanner from "@/assests/industry/coalminingbanner.png";
+import HYdroPowerBanner from "@/assests/industry/hydrogen.png";
+import NUclearBanner from "@/assests/industry/nuclear.png";
 
 const IndustryTypes = [
     {
@@ -32,7 +35,22 @@ const IndustryTypes = [
         bannerHeading: "Shaping the Future of Energy Generation",
         des: "For over a century, our technologies have powered the world—making energy generation more reliable, more efficient, and more sustainable across thermal, hydro, and renewable plants.",
         banner: powerBanner,
-        subType: ["Coal and mining", "Hydro Power", "Nuclear"],
+        subType: [{
+            name: "Coal and mining",
+            bannerHeading: "Revolutionizing Resource Extraction",
+            des: "We’ve been making mining operations safer, smarter, and more sustainable—leveraging advanced monitoring, automation, and predictive analytics to redefine productivity in coal and mineral mining.",
+            banner: coalMIningBanner
+        }, {
+            name: "Hydro Power",
+            bannerHeading: "Harnessing the Power of Water",
+            des: "We empower hydroelectric plants with advanced control systems, predictive maintenance tools, and grid integration solutions—enabling clean, reliable, and efficient power generation.",
+            banner: HYdroPowerBanner
+        }, {
+            name: "Nuclear",
+            bannerHeading: "Securing the Future of Nuclear",
+            des: "Our technologies enhance safety, efficiency, and performance in the nuclear sector—supporting civilian and research reactors with next-gen monitoring and control systems.",
+            banner: NUclearBanner
+        }],
 
     },
     {
@@ -106,7 +124,7 @@ const IndustryTypes = [
         img: sugar,
         bannerHeading: "Refining Processes, Elevating Yields",
         des: "We empower sugar mills with high-performance solutions that reduce energy use, minimize losses, and enhance overall productivity.",
-        banner:sugar_banner
+        banner: sugar_banner
 
     },
     {
@@ -121,16 +139,8 @@ const IndustryTypes = [
 export default function IndustryHelper() {
     const searchParams = useSearchParams();
     const [productType, setProductType] = useState(IndustryTypes.map((data: Record<string, any>) => data?.name?.toUpperCase()).includes(searchParams.get("type")?.toUpperCase()) ? searchParams.get("type")?.toUpperCase() : "POWER PLANT")
-    const [industryObject, setIndustryObject] = useState<any>(IndustryTypes.find((data: Record<string, any>) => data?.name?.toUpperCase() == searchParams.get("power")?.toUpperCase()) ?? {
-        name: "Power Plant",
-        img: power,
-        bannerHeading: "Shaping the Future of Energy Generation",
-        des: "For over a century, our technologies have powered the world—making energy generation more reliable, more efficient, and more sustainable across thermal, hydro, and renewable plants.",
-        banner: powerBanner,
-        subType: ["Coal and mining", "Hydro Power", "Nuclear"],
-
-    });
-    const [subType, setSubType] = useState("Coal and mining");
+    const [industryObject, setIndustryObject] = useState<any>(IndustryTypes.find((data: Record<string, any>) => data?.name?.toUpperCase() == searchParams.get("power")?.toUpperCase()) ?? IndustryTypes[0]);
+    const [subType, setSubType] = useState<any|null>(null);
 
     return <main className="w-full   ">
         <section className="w-full mb-10 px-4    border-b border-[#7F848D] pb-10  flex-wrap mt-[35px] sm:mt-[40px] md:mt-[50px] max-w-[1950px] mx-auto  flex justify-center items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 ">
@@ -139,7 +149,7 @@ export default function IndustryHelper() {
                     return <section key={index} className="flex lg:w-[105px] md:w-[95px] w-[85px] flex-col justify-start items-center flex-shrink-0  gap-5 ">
                         <aside onClick={() => {
 
-                            setSubType(index == 0 ? data?.subType[0] : "")
+                            setSubType(null)
 
                             setProductType(data?.name?.toUpperCase()); setIndustryObject(data)
                         }} className={`  h-[85px]   md:h-[95px] p-4 md:p-4 lg:p-4 lg:h-[105px] transition-all duration-500 ease-in-out cursor-pointer  flex justify-center items-center  ${productType == data.name?.toUpperCase() ? "bg-[#0057FF] border-[#0057FF] shadow-md" : "bg-[#F4F9FF] border-[#d6e9ff] shadow"} border rounded-xl `}>
@@ -160,7 +170,7 @@ export default function IndustryHelper() {
                     return <aside key={index} onClick={() => {
                         setSubType(type)
                     }} className={`${subType == type ? "bg-[#0057FF] text-white border-[#0057FF]" : "bg-[#F6FAFF] text-[#0057FF] border-[#0057FF42]"}  transition-all duration-200 cursor-pointer ease-in-out border max-w-[360px] text-center w-full py-3 font-medium rounded-lg   text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]`}>
-                        {type}
+                        {type?.name}
                     </aside>
                 })
             }
@@ -168,15 +178,15 @@ export default function IndustryHelper() {
 
         <section className="relative w-full h-[690px]">
             <img
-                src={industryObject.banner?.src}
-                alt={industryObject?.name}
+                src={subType?subType?.banner?.src:industryObject.banner?.src}
+                alt={subType?subType.name:industryObject?.name}
                 className="w-full z-10 absolute top-0 left-0 object-cover object-top h-full"
             />
 
             <section className="flex px-[3%] lg:px-[4%] xl:px-[5%] flex-col justify-evenly items-center w-full h-full ">
                 <aside className="text-[50px] relative z-10 sm:text-[55px]   flex text-shadow-lg/30 justify-start flex-col items-center lg:items-start md:text-[65px]  leading-14 sm:leading-20 xl:leading-24 lg:text-[75px] xl:text-[96px]   w-full text-white  font-bold">
-                    <p>{industryObject?.bannerHeading}</p>
-                    <p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] mt-3 leading-10">{industryObject?.des}</p>
+                    <p>{subType?subType?.bannerHeading:industryObject?.bannerHeading}</p>
+                    <p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] mt-3 leading-10">{subType?subType?.des:industryObject?.des}</p>
 
                 </aside>
                 <aside className="flex w-full relative z-10 justify-center  lg:justify-start items-center flex-wrap    gap-5 sm:gap-8">
@@ -186,13 +196,13 @@ export default function IndustryHelper() {
             </section>
         </section>
 
-        <aside className="pt-20  ">
+        <aside className="pt-20   ">
             <h3 className="text-[24px] px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] w-full justify-start flex items-start md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Trusted Partners </h3>
-            <aside className="flex justify-center px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
+            <aside className="flex justify-center min-h-[450px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
                 {
-                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType) : true)
+                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length==0)
                     ).map((data: any, index: number) => {
-                        return <aside className="flex w-full max-w-[500px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-[663px] px-5 py-6 md:py-4.5 shadow-md bg-white rounded-lg border border-gray-200  justify-start items-center gap-5 md:gap-4 lg:gap-5 xl:gap-6" key={index}>
+                        return <aside className="flex w-full max-w-[480px] sm:max-w-[510px] md:max-w-[550px] lg:max-w-[600px] px-5 py-6 md:py-4.5 shadow-md bg-white rounded-lg border border-gray-200  justify-start items-center gap-5 md:gap-4 lg:gap-5 xl:gap-6" key={index}>
                             <img className="w-[80px] rounded-full  object-cover object-top h-[80px]" src={data.img.src} alt={data.heading} />
                             <aside>
                                 <h4 className=" font-semibold text-[18px] text-[#0057FF] lg:text-[19px] xl:text-[20px]">{data?.name}</h4>

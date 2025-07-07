@@ -43,9 +43,26 @@ import paper2 from "@/assests/industry/industry/paper2.png";
 import paper3 from "@/assests/industry/industry/paper3.png";
 import paper4 from "@/assests/industry/industry/paper4.png";
 
+import bharat from "@/assests/industry/industry/bhrat.png";
+import national from "@/assests/industry/industry/bharatN.png";
+
 
 
 export const IndustryDataArray = [
+    {
+        name: "Bharat Heavy Electricals Limited  - BHEL",
+        des: "Power Plant",
+        img: bharat,
+        type: ["POWER PLANT"],
+        subType: []
+    },
+    {
+        name: "National Thermal Power Corporation Limited - NTPC",
+        des: "Power Plant",
+        img: national,
+        type: ["POWER PLANT"],
+        subType: []
+    },
     {
         name: "Damodar Valley Corporation - DVC",
         des: "Coal & Mining Sector",
@@ -68,7 +85,7 @@ export const IndustryDataArray = [
         subType: ["Hydro Power"]
     },
     {
-        name: "Nuclear Power Corporation Of India Limite-NPCIL",
+        name: "Nuclear Power Corporation Of India Limited-NPCIL",
         des: "Nuclear Sector",
         img: power4,
         type: ["POWER PLANT"],
@@ -249,7 +266,7 @@ export const IndustryDataArray = [
         type: ["SUGAR"],
         subType: []
     },
-     {
+    {
         name: "Trident Group",
         des: "Paper & Pulp Industry",
         img: paper1,
