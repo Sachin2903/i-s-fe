@@ -17,7 +17,7 @@ import steel1 from "@/assests/industry/industry/steel1.png";
 import steel2 from "@/assests/industry/industry/steel2.png";
 import steel3 from "@/assests/industry/industry/steel3.png";
 
-import cement1 from "@/assests/industry/industry/cement1.png";
+import cement1 from "@/assests/industry/industry/jsw_cement.png";
 import defense1 from "@/assests/industry/industry/defense1.png";
 
 import water1 from "@/assests/industry/industry/water1.png";
@@ -65,10 +65,10 @@ export const IndustryDataArray = [
     },
     {
         name: "Damodar Valley Corporation - DVC",
-        des: "Coal & Mining Sector",
+        des: "Thermal Power",
         img: power1,
         type: ["POWER PLANT"],
-        subType: ["Coal and mining"]
+        subType: ["Thermal Power"]
     },
     {
         name: "Satluj Jal Vidhyut Nigam - SJVN",
@@ -83,6 +83,27 @@ export const IndustryDataArray = [
         img: power3,
         type: ["POWER PLANT"],
         subType: ["Hydro Power"]
+    },
+    {
+        name: "Nuclear Power Corporation Of India Limited-NPCIL",
+        des: "Nuclear Sector",
+        img: power4,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
+    },
+    {
+        name: "Nuclear Power Corporation Of India Limited-NPCIL",
+        des: "Nuclear Sector",
+        img: power4,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
+    },
+    {
+        name: "Nuclear Power Corporation Of India Limited-NPCIL",
+        des: "Nuclear Sector",
+        img: power4,
+        type: ["POWER PLANT"],
+        subType: ["Nuclear"]
     },
     {
         name: "Nuclear Power Corporation Of India Limited-NPCIL",
@@ -149,21 +170,21 @@ export const IndustryDataArray = [
     },
     {
         name: "Steel Authority Of India- SAIL",
-        des: "Steel/mining/powerDurgapur",
+        des: "Steel/Mining/Power",
         img: steel1,
         type: ["STEEL"],
         subType: []
     },
     {
         name: "National Aluminum Company Limited - NALCO",
-        des: "Steel/mining/powerDurgapur",
+        des: "Steel/Mining/Power",
         img: steel2,
         type: ["STEEL"],
         subType: []
     },
     {
         name: "JSW Steels",
-        des: "Steel/mining/powerDurgapur",
+        des: "Steel/Mining/Power",
         img: steel3,
         type: ["STEEL"],
         subType: []
@@ -213,14 +234,14 @@ export const IndustryDataArray = [
     {
         name: "Brew Force Distilleries pvt ltd.",
         des: "Distilleries",
-        img: distilleries2,
+        img: "",
         type: ["DISTILLERIES"],
         subType: []
     },
     {
         name: "Avira Distillery",
         des: "Distilleries",
-        img: distilleries3,
+        img: "",
         type: ["DISTILLERIES"],
         subType: []
     },

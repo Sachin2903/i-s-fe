@@ -36,7 +36,7 @@ const IndustryTypes = [
         des: "For over a century, our technologies have powered the world—making energy generation more reliable, more efficient, and more sustainable across thermal, hydro, and renewable plants.",
         banner: powerBanner,
         subType: [{
-            name: "Coal and mining",
+            name: "Thermal Power",
             bannerHeading: "Revolutionizing Resource Extraction",
             des: "We’ve been making mining operations safer, smarter, and more sustainable—leveraging advanced monitoring, automation, and predictive analytics to redefine productivity in coal and mineral mining.",
             banner: coalMIningBanner
@@ -140,7 +140,7 @@ export default function IndustryHelper() {
     const searchParams = useSearchParams();
     const [productType, setProductType] = useState(IndustryTypes.map((data: Record<string, any>) => data?.name?.toUpperCase()).includes(searchParams.get("type")?.toUpperCase()) ? searchParams.get("type")?.toUpperCase() : "POWER PLANT")
     const [industryObject, setIndustryObject] = useState<any>(IndustryTypes.find((data: Record<string, any>) => data?.name?.toUpperCase() == searchParams.get("power")?.toUpperCase()) ?? IndustryTypes[0]);
-    const [subType, setSubType] = useState<any|null>(null);
+    const [subType, setSubType] = useState<any | null>(null);
 
     return <main className="w-full   ">
         <section className="w-full mb-10 px-4    border-b border-[#7F848D] pb-10  flex-wrap mt-[35px] sm:mt-[40px] md:mt-[50px] max-w-[1950px] mx-auto  flex justify-center items-start gap-3 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-7 ">
@@ -178,15 +178,15 @@ export default function IndustryHelper() {
 
         <section className="relative w-full h-[690px]">
             <img
-                src={subType?subType?.banner?.src:industryObject.banner?.src}
-                alt={subType?subType.name:industryObject?.name}
+                src={subType ? subType?.banner?.src : industryObject.banner?.src}
+                alt={subType ? subType.name : industryObject?.name}
                 className="w-full z-10 absolute top-0 left-0 object-cover object-top h-full"
             />
 
             <section className="flex px-[3%] lg:px-[4%] xl:px-[5%] flex-col justify-evenly items-center w-full h-full ">
                 <aside className="text-[50px] relative z-10 sm:text-[55px]   flex text-shadow-lg/30 justify-start flex-col items-center lg:items-start md:text-[65px]  leading-14 sm:leading-20 xl:leading-24 lg:text-[75px] xl:text-[96px]   w-full text-white  font-bold">
-                    <p>{subType?subType?.bannerHeading:industryObject?.bannerHeading}</p>
-                    <p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] mt-3 leading-10">{subType?subType?.des:industryObject?.des}</p>
+                    <p>{subType ? subType?.bannerHeading : industryObject?.bannerHeading}</p>
+                    <p className="text-[18px] sm:text-[20px] md:text-[22px] lg:text-[24px] xl:text-[28px] mt-3 leading-10">{subType ? subType?.des : industryObject?.des}</p>
 
                 </aside>
                 <aside className="flex w-full relative z-10 justify-center  lg:justify-start items-center flex-wrap    gap-5 sm:gap-8">
@@ -200,10 +200,20 @@ export default function IndustryHelper() {
             <h3 className="text-[24px] px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] w-full justify-start flex items-start md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Trusted Partners </h3>
             <aside className="flex justify-center min-h-[250px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
                 {
-                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length==0)
+                    IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length == 0)
                     ).map((data: any, index: number) => {
                         return <aside className="flex w-full max-w-[480px] sm:max-w-[510px] md:max-w-[550px] lg:max-w-[600px] px-5 py-6 md:py-4.5 shadow-md bg-white rounded-lg border border-gray-200  justify-start items-center gap-5 md:gap-4 lg:gap-5 xl:gap-6" key={index}>
-                            <img className="w-[80px] rounded-full  object-cover object-top h-[80px]" src={data.img.src} alt={data.heading} />
+                            <div className="w-[80px] bg-gray-200 rounded-full h-[80px]">
+
+
+                                {data.img&&<img
+                                    onError={(e: any) => (e.target.style.display = "hidden")}
+                                    className="w-full h-full rounded-full object-cover object-top"
+                                    src={data.img.src}
+                                    alt={data.heading}
+                                />}
+                            </div>
+
                             <aside>
                                 <h4 className=" font-semibold text-[18px] text-[#0057FF] lg:text-[19px] xl:text-[20px]">{data?.name}</h4>
                                 <p className="font-medium text-[#000000] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px]">{data?.des}</p>

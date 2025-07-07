@@ -199,7 +199,7 @@ export const allProductsArray = [
         subType: ["TEMPERATURE SERIES"],
         pdf: [{ banner: "/pdf/pdf12_page-0001.jpg", pdf: "/pdf/pdf12.pdf" }],
         tag: [], img: [knifeEdge18, pressureH2],
-        name: "Head Mount TT 2",
+        name: "Head Mount TT",
         des: "Digitally configurable transmitter, DIN rail transmitter and Head Mounted Smart Temprature Transmitter for precise industrial temperature measurement.",
         extraDes: "Designed for precision and adaptability, our Temperature Transmitters seamlessly integrates with RTDs, thermocouples, and resistance sensors. They offer accurate temperature measurements with digital communication capabilities, including HART protocol, ensuring efficient data transmission and diagnostics. Ideal for diverse industrial applications, these transmitters support easy configuration via PC or handheld devices, enhancing process control and operational efficiency."
     },
