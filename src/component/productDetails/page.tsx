@@ -64,7 +64,7 @@ export default function ProductDetailsHelper({ product }: any) {
         <section className="flex md:flex-row    px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] flex-col  justify-start pt-8 gap-5 lg:gap-6 xl:gap-7 items-start">
             <aside className="flex w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
                 <aside className="w-full p-6 sm:w-[378] h-[382px] md:w-[329px] md:h-[290px] lg:w-[420px] lg:h-[345px] xl:w-[521px] xl:h-[426px]  flex justify-center items-center ">
-                    <img className="w-full object-cover object-top " alt="i&s" src={items?.img[0].src} />
+                    <img className="h-full object-cover object-top " alt="i&s" src={items?.img[0].src} />
                 </aside>
 
                 <aside className="flex gap-2 ml-3 md:ml-4 lg:ml-6 flex-col">
@@ -88,7 +88,7 @@ export default function ProductDetailsHelper({ product }: any) {
                                     className="w-[80px] p-2 h-[84px] sm:w-[85px] sm:h-[89px] md:w-[88px] md:h-[95px] lg:w-[95px] lg:h-[91px] xl:w-[100px] xl:h-[96px] flex justify-center items-center border-gray-200 border shadow hover:shadow-md transition-all duration-300 ease-in-out cursor-pointer"
                                 >
                                     <img
-                                        className="object-cover object-top w-full"
+                                        className="object-cover object-top h-full"
                                         alt="i&s"
                                         src={data.src}
                                     />

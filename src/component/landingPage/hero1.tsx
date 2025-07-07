@@ -4,7 +4,7 @@ import and_logo from "@/assests/landingPage/hero1/andLogo.png";
 
 export default function Hero1() {
     return (
-        <section className="relative w-full h-screen">
+        <section className="relative flex flex-col justify-start items-center w-full h-screen">
             <Navbar color={false} />
 
              <video
@@ -16,7 +16,7 @@ export default function Hero1() {
             >
                 <source src="/intro.mp4" type="video/mp4" />
             </video> 
-            <section className="flex px-[3%] lg:px-[4%] xl:px-[5%] flex-col justify-evenly items-center w-full h-full ">
+            <section className="flex px-[3%]  lg:px-[4%] xl:px-[5%] flex-col justify-evenly items-center w-full h-full ">
                 <aside className="text-[50px] relative z-10 sm:text-[55px]   flex text-shadow-lg/30 justify-start flex-col items-center lg:items-start md:text-[65px]  leading-14 sm:leading-20 xl:leading-24 lg:text-[75px] xl:text-[96px]   w-full text-white  font-medium">
                     <p>Welcome to</p>
                     <h1 className="flex sm:flex-row flex-col justify-start gap-3 md:gap-4 lg:gap-5 font-[1000] items-center">Instruments <img src={and_logo.src} alt="i&s" className="w-[58px] md:w-[73px] lg:w-[83px] xl:w-[103px]" /> Systems</h1>
