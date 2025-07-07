@@ -432,7 +432,7 @@ export const automationProductArray = [
         compHead: "Complete Process Coverage",
         compleDes: "We provide complete instrumentation and automation solutions for:",
         points: ["Falling Film Evaporators", "Direct Contact Heaters", "Condensate Flashing Systems", "Condensers", "Condensate Flashing Systems", "Carbonatation Systems", "Cascade Continuous Pans", "Sugar Driers (Rotary & Fluidized Bed)"],
-        objTitle: "Sugar Driers (Rotary & Fluidized Bed)",
+        objTitle: "Technical Capabilities",
         obj: [
             {
                 head: "Precise Process Control:",
