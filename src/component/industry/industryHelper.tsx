@@ -198,7 +198,7 @@ export default function IndustryHelper() {
 
         <aside className="pt-20   ">
             <h3 className="text-[24px] px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] w-full justify-start flex items-start md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Trusted Partners </h3>
-            <aside className="flex justify-center min-h-[450px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
+            <aside className="flex justify-center min-h-[250px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
                 {
                     IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length==0)
                     ).map((data: any, index: number) => {
