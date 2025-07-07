@@ -131,7 +131,7 @@ export default function SpecialAutomation() {
                     allProductsArray.filter((data: any) => data?.tag?.includes("Water Automation")).map((data: Record<string, any>, index: number) => {
                         return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
                             <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                                <img className="max-w-full h-[85%]" src={data?.img?.[0]?.src} alt="i&s" />
+                                <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
                                 <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
                             </div>
                             <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
