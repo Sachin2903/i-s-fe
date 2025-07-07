@@ -91,34 +91,34 @@ export const IndustryDataArray = [
         type: ["POWER PLANT"],
         subType: ["Nuclear"]
     },
-    {
-        name: "Nuclear Power Corporation Of India Limited-NPCIL",
-        des: "Nuclear Sector",
-        img: power4,
-        type: ["POWER PLANT"],
-        subType: ["Nuclear"]
-    },
-    {
-        name: "Nuclear Power Corporation Of India Limited-NPCIL",
-        des: "Nuclear Sector",
-        img: power4,
-        type: ["POWER PLANT"],
-        subType: ["Nuclear"]
-    },
-    {
-        name: "Nuclear Power Corporation Of India Limited-NPCIL",
-        des: "Nuclear Sector",
-        img: power4,
-        type: ["POWER PLANT"],
-        subType: ["Nuclear"]
-    },
-    {
-        name: "Gas Authority Of India Limited - GAIL",
-        des: "Oil & Gas Industry",
-        img: oil1,
-        type: ["OIL & GAS"],
-        subType: []
-    },
+    // {
+    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
+    //     des: "Nuclear Sector",
+    //     img: power4,
+    //     type: ["POWER PLANT"],
+    //     subType: ["Nuclear"]
+    // },
+    // {
+    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
+    //     des: "Nuclear Sector",
+    //     img: power4,
+    //     type: ["POWER PLANT"],
+    //     subType: ["Nuclear"]
+    // },
+    // {
+    //     name: "Nuclear Power Corporation Of India Limited-NPCIL",
+    //     des: "Nuclear Sector",
+    //     img: power4,
+    //     type: ["POWER PLANT"],
+    //     subType: ["Nuclear"]
+    // },
+    // {
+    //     name: "Gas Authority Of India Limited - GAIL",
+    //     des: "Oil & Gas Industry",
+    //     img: oil1,
+    //     type: ["OIL & GAS"],
+    //     subType: []
+    // },
     {
         name: "Indian Oil Corporation Limited- IOCL",
         des: "Oil & Gas Industry",
