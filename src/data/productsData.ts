@@ -366,7 +366,7 @@ export const allProductsArray = [
 
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad991",
-        type: [],
+        type: ["SUGAR AUTOMATION"],
         subType: [],
         extraType: [],
         pdf: [],
@@ -377,7 +377,7 @@ export const allProductsArray = [
     },
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad994",
-        type: [],
+        type: ["SUGAR AUTOMATION"],
         subType: [],
         extraType: [],
         pdf: [],
@@ -388,7 +388,7 @@ export const allProductsArray = [
     },
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad9912",
-        type: [],
+        type: ["SUGAR AUTOMATION"],
         subType: [],
         extraType: [],
         pdf: [],
@@ -399,7 +399,7 @@ export const allProductsArray = [
     },
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad9913",
-        type: [],
+        type: ["SUGAR AUTOMATION"],
         subType: [],
         extraType: [],
         pdf: [],
