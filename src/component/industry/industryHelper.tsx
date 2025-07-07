@@ -12,7 +12,7 @@ import oilBanner from "@/assests/industry/oilBanner.png";
 import chemicalBanner from "@/assests/industry/chemical.png";
 import steelBanner from "@/assests/industry/steelBanner.png";
 import cementBanner from "@/assests/industry/cementBanner.png";
-import defenseBanner from "@/assests/industry/defenseBanner.png";
+import defenseBanner from "@/assests/industry/defensein.jpeg";
 import { IndustryDataArray } from "@/data/industryData";
 import water_manage from "@/assests/industry/water_managment.png";
 import water_manage_banner from "@/assests/industry/watermanagementBanner.png";

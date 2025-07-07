@@ -17,7 +17,7 @@ import steel1 from "@/assests/industry/industry/steel1.png";
 import steel2 from "@/assests/industry/industry/steel2.png";
 import steel3 from "@/assests/industry/industry/steel3.png";
 
-import cement1 from "@/assests/industry/industry/jsw_cement.png";
+import cement1 from "@/assests/industry/industry/jswcementlogo.webp";
 import defense1 from "@/assests/industry/industry/defense1.png";
 
 import water1 from "@/assests/industry/industry/water1.png";
