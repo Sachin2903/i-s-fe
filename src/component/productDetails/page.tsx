@@ -119,28 +119,21 @@ export default function ProductDetailsHelper({ product }: any) {
             <aside className="w-full gap-3 md:gap-5 flex justify-start items-center  py-5 sm:py-8 px-3 sm:px-6">
                 {
                     items?.pdf?.map((data: any, index: number) => {
-                        return <div
+                        return <a
                             key={index}
-                            onClick={() => {
-                                const link = document.createElement("a");
-                                link.href = data.pdf;
-                                link.download = "";
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            }}
-                            className="relative cursor-pointer w-[164px] sm:w-[184px] md:w-[204px] lg:w-[224px] xl:w-[254px] rounded-lg shadow-lg hover:shadow-xl transition duration-300"
+                            href={data.pdf}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download={`${product.name??"i&s"}.pdf`}
+                            className="relative cursor-pointer block w-[164px] sm:w-[184px] md:w-[204px] lg:w-[224px] xl:w-[254px] rounded-lg shadow-lg hover:shadow-xl transition duration-300"
                         >
                             <p className="ribbon">Open PDF</p>
-
                             <img
                                 src={data?.banner}
                                 alt="Download PDF"
                                 className="w-full h-auto rounded-md"
                             />
-                        </div>
-
-
+                        </a>
 
                     })
                 }
