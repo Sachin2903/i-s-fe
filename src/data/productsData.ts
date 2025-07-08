@@ -112,9 +112,6 @@ import sugar2 from "@/assests/items/sugar images/sugar2.png"
 import sugar3 from "@/assests/items/sugar images/sugar3.png"
 import sugar4 from "@/assests/items/sugar images/sugar5.png"
 
-
-
-
 export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad91",
@@ -204,7 +201,7 @@ export const allProductsArray = [
         type: ["TRANSMITTERS"],
         subType: ["TEMPERATURE SERIES"],
         pdf: [{ banner: "/pdf/pdf12_page-0001.jpg", pdf: "/pdf/pdf12.pdf" }],
-        tag: [], img: [knifeEdge18, pressureH2],
+        tag: [], img: [knifeEdge18],
         name: "Head Mount TT",
         des: "Digitally configurable transmitter, DIN rail transmitter and Head Mounted Smart Temprature Transmitter for precise industrial temperature measurement.",
         extraDes: "Designed for precision and adaptability, our Temperature Transmitters seamlessly integrates with RTDs, thermocouples, and resistance sensors. They offer accurate temperature measurements with digital communication capabilities, including HART protocol, ensuring efficient data transmission and diagnostics. Ideal for diverse industrial applications, these transmitters support easy configuration via PC or handheld devices, enhancing process control and operational efficiency."

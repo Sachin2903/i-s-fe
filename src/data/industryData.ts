@@ -48,6 +48,8 @@ import paper4 from "@/assests/industry/industry/paper4.png";
 
 import bharat from "@/assests/industry/industry/bhrat.png";
 import national from "@/assests/industry/industry/bharatN.png";
+import ntpc from "@/assests/industry/industry/ntpc.jpeg";
+
 
 
 
@@ -70,6 +72,13 @@ export const IndustryDataArray = [
         name: "Damodar Valley Corporation - DVC",
         des: "Thermal Power",
         img: power1,
+        type: ["POWER PLANT"],
+        subType: ["Thermal Power"]
+    },
+    {
+        name: "NTPC",
+        des: "Thermal Power",
+        img: ntpc,
         type: ["POWER PLANT"],
         subType: ["Thermal Power"]
     },
