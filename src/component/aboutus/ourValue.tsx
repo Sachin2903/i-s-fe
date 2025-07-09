@@ -99,7 +99,7 @@ export default function OurValue() {
                 })
             }
         </aside>
-        <a href="/pdf/company.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex justify-center mx-auto w-fit mt-8 sm:mt-16 rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf /> Download Broucher</a>
+        <a href="/pdf/company.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex justify-center mx-auto w-fit mt-8 sm:mt-16 rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf /> Download Brochure</a>
 
         <aside className="py-20">
             <h3 className="text-[24px] w-full justify-center flex items-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Value</h3>
