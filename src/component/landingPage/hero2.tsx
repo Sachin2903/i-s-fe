@@ -66,9 +66,9 @@ export default function Hero2() {
                         href={`/products?type=${data.name?.toUpperCase()}`}
                         className="group flex group flex-col justify-start items-center relative bg-white z-30 w-[365px] p-[4%] md:p-[2%] py-[3%] md:py-[1.4%] lg:w-[390px] xl:w-[415px] flex-shrink-0 rounded-xl border border-gray-200 shadow-md hover:bg-[#0057FF] transition-all duration-300"
                     >
-                        <p className=" text-[20px] md:text-[24px] lg:text-[28px] self-end xl:text-[32px] bg-[#F5F8FF] p-2 md:p-3 w-fit rounded-xl text-[#0057FF] font-semibold">
+                        {/* <p className=" text-[20px] md:text-[24px] lg:text-[28px] self-end xl:text-[32px] bg-[#F5F8FF] p-2 md:p-3 w-fit rounded-xl text-[#0057FF] font-semibold">
                             {data.count}+
-                        </p>
+                        </p> */}
                         <aside
                             className={`md:h-[120px] ${index > 2 ? "p-5 sm:p-6" : "p-2"} flex justify-center items-center self-start h-[95px] lg:h-[145hpx]`}
                         >
