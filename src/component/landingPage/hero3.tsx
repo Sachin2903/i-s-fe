@@ -22,8 +22,8 @@ const numbers = [
 ]
 export default function Hero3() {
     return <section className="w-dvw relative  flex justify-start items-center sm:py-8  py-6 md:py-10 lg:py-12 xl:py-14 flex-col bg-white">
-        <h3 className="text-[24px] text-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Growth Story</h3>
-        <section className="w-full my-10 flex-wrap mx-auto max-w-[1100px] flex justify-evenly items-center  sm:flex-row flex-col  gap-5 sm:gap-3 lg:gap-4 xl:gap-5">
+        <h3 className="text-[30px] mb-12 md:mb-14 lg:mb-16 text-center md:text-[34px] lg:text-[38px] text-blue-600 xl:text-[40px] font-bold">Smart Automation, Indian Innovation</h3>
+        {/* <section className="w-full my-10 flex-wrap mx-auto max-w-[1100px] flex justify-evenly items-center  sm:flex-row flex-col  gap-5 sm:gap-3 lg:gap-4 xl:gap-5">
             {
                 numbers.map((data: Record<string, any>, index: number) => {
                     return <aside key={index} className="flex-col flex justify-start  items-center">
@@ -34,6 +34,6 @@ export default function Hero3() {
                 })
             }
 
-        </section>
+        </section> */}
     </section>
 }
