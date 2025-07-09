@@ -13,7 +13,7 @@ import chemicalBanner from "@/assests/industry/chemical.png";
 import steelBanner from "@/assests/industry/steelBanner.png";
 import cementBanner from "@/assests/industry/cementBanner.png";
 import defenseBanner from "@/assests/industry/defensein.jpeg";
-import { IndustryDataArray } from "@/data/industryData";
+import { IndustryDataArray, paperIndustryClients, sugarIndustryCLient } from "@/data/industryData";
 import water_manage from "@/assests/industry/water_managment.png";
 import water_manage_banner from "@/assests/industry/watermanagementBanner.png";
 import distilleries from "@/assests/industry/distilleries.png";
@@ -198,7 +198,16 @@ export default function IndustryHelper() {
 
         <aside className="pt-20   ">
             <h3 className="text-[24px] px-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%] w-full justify-start flex items-start md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Trusted Partners </h3>
-            <aside className="flex justify-center min-h-[250px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
+
+            {(productType == "SUGAR" || productType == "PAPER & PULP") ? <aside className=" min-h-[250px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF]  grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 mt-10 md:mt-14 ">
+                {
+                    [...(productType == "SUGAR" ? sugarIndustryCLient : paperIndustryClients)].map((client: string, index: number) => {
+                        return <aside className="w-full bg-white border border-gray-100 shadow  rounded-md  px-[3%] py-5" key={index}>
+                            <p className="text-[#0057FF] font-semibold text-[16px] w-full text-center sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">{client}</p>
+                        </aside>
+                    })
+                }
+            </aside> : <aside className="flex justify-center min-h-[250px] px-[0.5%]   md:px-[1%] lg:px-[1.5%] xl:px-[2%] py-16 bg-[#F7FAFF] items-center flex-wrap gap-6 lg:gap-8 mt-10 md:mt-14 ">
                 {
                     IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length == 0)
                     ).map((data: any, index: number) => {
@@ -206,7 +215,7 @@ export default function IndustryHelper() {
                             <div className="w-[80px] bg-gray-200 rounded-full h-[80px]">
 
 
-                                {data.img&&<img
+                                {data.img && <img
                                     onError={(e: any) => (e.target.style.display = "hidden")}
                                     className="w-full h-full rounded-full object-fill bg-gray-200 object-top"
                                     src={data.img.src}
@@ -221,8 +230,10 @@ export default function IndustryHelper() {
                         </aside>
                     })
                 }
-            </aside>
+            </aside>}
         </aside>
+
+
 
     </main>
 }

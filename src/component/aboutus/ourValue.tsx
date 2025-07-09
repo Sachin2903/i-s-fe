@@ -7,6 +7,7 @@ import img5 from "@/assests/aboutus/ourValues/5.png"
 import img6 from "@/assests/aboutus/ourValues/6.png"
 import mission from "@/assests/aboutus/mission.png";
 import vission from "@/assests/aboutus/vission.png";
+import { FaFilePdf } from "react-icons/fa";
 
 const ourValueArray = [
     {
@@ -89,8 +90,8 @@ export default function OurValue() {
 
         <aside className="w-full flex-col md:flex-row mt-16 flex justify-center items-center gap-6 ">
             {
-                MissionVision?.map((data: any) => {
-                    return <aside className="w-full  flex-col flex justify-start items-center gap-1 border border-[#e6ecf7] shadow-md bg-[#F7FAFF] max-w-[611px] px-4 py-6">
+                MissionVision?.map((data: any,index:number) => {
+                    return <aside key={index} className="w-full  flex-col flex justify-start items-center gap-1 border border-[#e6ecf7] shadow-md bg-[#F7FAFF] max-w-[611px] px-4 py-6">
                         <div className="w-[85px] border border-gray-200 shadow-md flex justify-center items-center h-[85px] p-4 rounded-full bg-white"><img src={data.img.src} alt={data.name} className=" h-full" /></div>
                         <h3 className="text-[24px] font-bold sm:text-[26px] md:text-[28px] lg:text-[32px] xl:text-[36px]">{data?.name}</h3>
                         <p className="text-[16px] max-w-[90%] font-medium text-center text-[#7F848D] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px]">{data?.description}</p>
@@ -98,7 +99,7 @@ export default function OurValue() {
                 })
             }
         </aside>
-
+        <a href="/pdf/company.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex justify-center mx-auto w-fit mt-8 sm:mt-16 rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf /> Download Broucher</a>
 
         <aside className="py-20">
             <h3 className="text-[24px] w-full justify-center flex items-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Value</h3>
@@ -116,12 +117,6 @@ export default function OurValue() {
                 }
             </aside>
         </aside>
-
-
-
-
-
-
 
     </section>
 }
