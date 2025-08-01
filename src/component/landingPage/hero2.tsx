@@ -32,7 +32,7 @@ const categoryArray = [
         count: 20
     },
     {
-        name: "Motorized Autuators",
+        name: "Motorized Actuators",
         img: motorized,
         class: "h-full",
         des: "Motorized actuators provide reliable motion control for valves and systems.",
