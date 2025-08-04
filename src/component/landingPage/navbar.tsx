@@ -10,7 +10,7 @@ export default function Navbar({ color }: { color: boolean }) {
             <Link href="/"><li>HOME</li></Link>
             <Link href="/products"><li>PRODUCTS</li></Link>
             <Link href="/industry"><li>INDUSTRY</li></Link>
-            <Link href="/"><li>BLOGS</li></Link>
+            <Link target="_blank" href="https://blog.instruments-systems.in"><li>BLOGS</li></Link>
             <Link href="/aboutus"><li>ABOUT US</li></Link>
             <Link href="/contactus"><li>CONTACT US</li></Link>
             {/* <aside className="w-[220px] lg:w-[270px] xl:w-[300px] h-[36px] border px-3 border-white/60 text-gray-100 flex justify-between items-center  rounded-full">
