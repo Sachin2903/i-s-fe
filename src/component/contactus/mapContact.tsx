@@ -6,7 +6,7 @@ const contactUsData = [
     {
         img: <IoMdCall className="bg-white text-4xl sm:text-5xl rounded-full text-[#3461FF] p-1.5 sm:p-2 border border-gray-200" />,
         name: "Phone Number :",
-        data: "0135-2641580"
+        data: "+919720870870"
     },
     {
         img: <MdEmail className="bg-white text-4xl sm:text-5xl rounded-full text-[#3461FF] p-1.5 sm:p-2 border border-gray-200" />,

@@ -21,7 +21,7 @@ export default function AskAQuestion() {
                     <div className="bg-[#0057FF] flex-shrink-0 text-white w-[40px] sm:w-[45px] lg:w-[50px]  h-[40px] sm:h-[45px] lg:h-[50px] flex justify-center items-center rounded-full">  <FaLocationDot className="text-base sm:text-lg lg:text-xl" /></div>
                     <section className="">
                         <h3 className="text-[16px]  md:text-[18px] lg:text-[20px] xl:text-[20px] font-bold">Office Address</h3>
-                        <p className="text-[12px] mt-2 md:text-[13px] lg:text-[14px] xl:text-[14px] font-medium text-[#7F848D]">30, Mohabewala Industrial Area, Dehradun, Uttarakhand</p>
+                        <p className="text-[12px] mt-2 md:text-[13px] lg:text-[14px] xl:text-[14px] font-medium text-[#7F848D]">30, Mohabewala Industrial Area, Dehradun 248002, Uttarakhand, India</p>
                     </section>
                 </Link>
 
