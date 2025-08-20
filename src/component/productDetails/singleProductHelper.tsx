@@ -22,6 +22,7 @@ const SingleProductHelper = ({ product: data }: any) => {
 
     changeImage();
 
+    
     return () => clearTimeout(timer);
   }, [data]);
 
