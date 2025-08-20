@@ -12,6 +12,7 @@ import { allProductsArray } from "@/data/productsData";
 import Link from "next/link";
 import SpecialAutomation from "./specialAutomation";
 import linear from "@/assests/products/linear.png"
+import SingleProductHelper from "./singleProductHelper";
 
 const productTypes = [
     {
@@ -58,7 +59,7 @@ const productTypes = [
     }
 ]
 
-const transmitters_subType = ["Pressure Series", "Temperature Series", "Level Series", "Flow Meter"]
+const transmitters_subType = ["Pressure Series", "Temperature Series", "Level Series", "Flow Series"]
 
 export default function ProductsHelper() {
     const searchParams = useSearchParams();
@@ -94,48 +95,28 @@ export default function ProductsHelper() {
                 })
             }
         </section>}
-        {productType == "TRANSMITTERS" && (subType == "LEVEL SERIES" || subType == "FLOW METER") ? <section className="w-fullpx-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  flex justify-center gap-5 flex-wrap pb-18 items-center">
-            <p className="w-full  md:mx-[2%] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] lg:mx-[2.5%] xl:mx-[3%] text-center px-4 py-2 font-semibold bg-[#F7FAFF]">{subType == "FLOW METER" ? "Flow series" : "Contact Type"}</p>
+        {productType == "TRANSMITTERS" && (subType == "LEVEL SERIES" || subType == "FLOW SERIES") ? <section className="w-fullpx-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  flex justify-center gap-5 flex-wrap pb-18 items-center">
+            <p className="w-full  md:mx-[2%] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] lg:mx-[2.5%] xl:mx-[3%] text-center px-4 py-2 font-semibold bg-[#F7FAFF]">{subType == "FLOW SERIES" ? "Flow series" : "Contact Type"}</p>
             {
-                allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? (subType == "LEVEL SERIES" || subType == "FLOW METER") ? data?.extraType?.includes(subType == "FLOW METER" ? "FLOW SERIES" : "CONTACT TYPE") : data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
-                    return <Link className="border sm:w-[275px] w-[215px] md:w-[285px] lg:w-[295px] xl:w-[315px] rounded-lg p-4 border-[#EBEDF0] shadow-md group" key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}>
-                        <div className="w-full relative shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                            <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
-                            <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
-                        </div>
-                        <p className="text-[#323334] line-clamp-2 min-h-[60px] px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
-                        <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                    </Link>
+                allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? (subType == "LEVEL SERIES" || subType == "FLOW SERIES") ? data?.extraType?.includes(subType == "FLOW SERIES" ? "FLOW SERIES" : "CONTACT TYPE") : data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
+                    return <SingleProductHelper product={data} key={index} />
                 })
             }
-            <p className="w-full  md:mx-[2%] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] lg:mx-[2.5%] xl:mx-[3%] text-center px-4 py-2 font-semibold bg-[#F7FAFF]">{subType == "FLOW METER" ? "Remote seal series" : "Non-Contact Type"}</p>
+            <p className="w-full  md:mx-[2%] text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] xl:text-[20px] lg:mx-[2.5%] xl:mx-[3%] text-center px-4 py-2 font-semibold bg-[#F7FAFF]">{subType == "FLOW SERIES" ? "Remote seal series" : "Non-Contact Type"}</p>
             {
-                               allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? (subType == "LEVEL SERIES" || subType == "FLOW METER") ? data?.extraType?.includes(subType == "FLOW METER" ? "REMOTE SEAL SERIES" : "NON-CONTACT TYPE") : data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
-                    return <Link className="border sm:w-[275px] w-[215px] md:w-[285px] lg:w-[295px] xl:w-[315px] rounded-lg p-4 border-[#EBEDF0] shadow-md group" key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}>
-                        <div className="w-full relative shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                            <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
-                            <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
-                        </div>
-                        <p className="text-[#323334] line-clamp-2 min-h-[60px] px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
-                        <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                    </Link>
+                allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? (subType == "LEVEL SERIES" || subType == "FLOW SERIES") ? data?.extraType?.includes(subType == "FLOW SERIES" ? "REMOTE SEAL SERIES" : "NON-CONTACT TYPE") : data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
+                    return <SingleProductHelper product={data} key={index} />
                 })
             }
 
         </section> : productType == "AUTOMATION" ? <SpecialAutomation /> : <section className="w-fullpx-[2%]   md:px-[2%] lg:px-[2.5%] xl:px-[3%]  flex justify-center gap-5 flex-wrap pb-18 items-center">
             {
                 allProductsArray.filter((data: Record<string, any>) => productType == "TRANSMITTERS" ? data?.subType?.includes(subType) : data.type.includes(productType) || productType == "ALL PRODUCTS").map((data: Record<string, any>, index: number) => {
-                    return <Link className="border sm:w-[275px] w-[215px] md:w-[285px] lg:w-[295px] xl:w-[315px] rounded-lg p-4 border-[#EBEDF0] shadow-md group" key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}>
-                        <div className="w-full relative shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                            <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
-                            <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
-                        </div>
-                        <p className="text-[#323334] line-clamp-2 min-h-[60px] px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
-                        <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                    </Link>
+                    return <SingleProductHelper product={data} key={index} />
                 })
             }
         </section>}
 
     </main>
 }
+

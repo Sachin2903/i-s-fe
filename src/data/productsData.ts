@@ -38,9 +38,9 @@ import butter3 from "@/assests/items/Butterfly Valve/6.jpg";
 import butter4 from "@/assests/items/Butterfly Valve/8.jpg";
 
 import global1 from "@/assests/items/Globe Type Control Valve/1-1.jpg";
-import global2 from "@/assests/items/Globe Type Control Valve/1-1.jpg";
-import global3 from "@/assests/items/Globe Type Control Valve/1-1.jpg";
-import global4 from "@/assests/items/Globe Type Control Valve/1-1.jpg";
+import global2 from "@/assests/items/Globe Type Control Valve/2.jpg";
+import global3 from "@/assests/items/Globe Type Control Valve/3 Way.jpg";
+import global4 from "@/assests/items/Globe Type Control Valve/3-3.jpg";
 
 import iris1 from "@/assests/items/IRIS Control Valve/17.jpg";
 
@@ -285,7 +285,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad106",
         type: ["TRANSMITTERS", "FLOW METER"],
-        subType: ["FLOW METER"],
+        subType: ["FLOW SERIES"],
         extraType: ["FLOW SERIES"],
         pdf: [{ banner: "/pdf/pdf18_page-0001.jpg", pdf: "/pdf/pdf18.pdf" }],
 
@@ -297,7 +297,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad107",
         type: ["TRANSMITTERS", "FLOW METER"],
-        subType: ["FLOW METER"],
+        subType: ["FLOW SERIES"],
         pdf: [{ banner: "/pdf/pdf19_page-0001.jpg", pdf: "/pdf/pdf19.pdf" }],
 
         extraType: ["FLOW SERIES"],
@@ -309,7 +309,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad94",
         type: ["TRANSMITTERS"],
-        subType: ["FLOW METER"],
+        subType: ["FLOW SERIES"],
         extraType: ["REMOTE SEAL SERIES"],
         pdf: [{ banner: "/pdf/pdf20_page-0001.jpg", pdf: "/pdf/pdf20.pdf" }],
 
@@ -321,7 +321,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad93",
         type: ["TRANSMITTERS"],
-        subType: ["FLOW METER"],
+        subType: ["FLOW SERIES"],
         extraType: ["REMOTE SEAL SERIES"],
         pdf: [{ banner: "/pdf/pdf21_page-0001.jpg", pdf: "/pdf/pdf21.pdf" }],
 
