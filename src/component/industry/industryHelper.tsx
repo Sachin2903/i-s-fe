@@ -212,12 +212,12 @@ export default function IndustryHelper() {
                     IndustryDataArray.filter((data: Record<string, any>) => data.type.includes(productType) && (subType ? data.subType.includes(subType?.name) : data.subType?.length == 0)
                     ).map((data: any, index: number) => {
                         return <aside className="flex w-full max-w-[480px] sm:max-w-[510px] md:max-w-[550px] lg:max-w-[600px] px-5 py-6 md:py-4.5 shadow-md bg-white rounded-lg border border-gray-200  justify-start items-center gap-5 md:gap-4 lg:gap-5 xl:gap-6" key={index}>
-                            <div className="w-[80px] bg-gray-200 rounded-full h-[80px]">
+                            <div className={`w-[80px] ${data.img?"":"bg-gray-200"}  rounded-full h-[80px]`}>
 
 
                                 {data.img && <img
                                     onError={(e: any) => (e.target.style.display = "hidden")}
-                                    className="w-full h-full rounded-full object-fill bg-gray-200 object-top"
+                                    className="w-full h-full   object-contain  object-center"
                                     src={data.img.src}
                                     alt={data.heading}
                                 />}

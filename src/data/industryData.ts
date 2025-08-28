@@ -1,6 +1,9 @@
 import power1 from "@/assests/industry/industry/power1.png";
 import power2 from "@/assests/industry/industry/power2.png";
 import power3 from "@/assests/industry/industry/power3.png";
+import powerhydro3 from "@/assests/industry/industry/AHPC (GVK).jpeg";
+import powerhydro4 from "@/assests/industry/industry/NHPC.jpeg";
+import powerhydro5 from "@/assests/industry/industry/THDC India Ltd..png";
 import power4 from "@/assests/industry/industry/power4.png";
 import power5 from "@/assests/industry/industry/power5.png";
 import power6 from "@/assests/industry/industry/power6.png";
@@ -21,15 +24,34 @@ import steel2 from "@/assests/industry/industry/steel2.png";
 import steel3 from "@/assests/industry/industry/steel3.png";
 
 import cement1 from "@/assests/industry/industry/jswcementlogo.webp";
+import cement2 from "@/assests/industry/industry/Vikram Cement (Unit of UltraTech Cement).jpg";
+import cement3 from "@/assests/industry/industry/Ultratech Cement.png";
 import defense1 from "@/assests/industry/industry/defense1.png";
+import defense2 from "@/assests/industry/industry/Indian Space Research Organisation (ISRO).png";
+import defense3 from "@/assests/industry/industry/MIlitary Engineering Services.png";
+import defense4 from "@/assests/industry/industry/Hathor Rockets.jpeg";
+import defense5 from "@/assests/industry/industry/Hinadustan Aeronautics Limited (HAL).png";
+import defense6 from "@/assests/industry/industry/Indian Ordnance Factory (Dehradun).gif";
 
 import water1 from "@/assests/industry/industry/water1.png";
 import water2 from "@/assests/industry/industry/water2.png";
 import water3 from "@/assests/industry/industry/water3.png";
+import water4 from "@/assests/industry/industry/Jal Shakti Jammu (Public Health Engineering Department).jpg";
+import water5 from "@/assests/industry/industry/MIlitary Engineering Services.png";
+import water6 from "@/assests/industry/industry/Uttarakhand Peyjal Sansadhan Vikas Evam Nirman Nigam.jpeg";
 
 import distilleries1 from "@/assests/industry/industry/distilleries1.png";
-import distilleries2 from "@/assests/industry/industry/distilleries1.png";
-import distilleries3 from "@/assests/industry/industry/distilleries1.png";
+import distilleries2 from "@/assests/industry/industry/DCM Shriram Limited.jpg";
+import distilleries3 from "@/assests/industry/industry/Bajaj Hindustan Sugar Ltd..png";
+import distilleries4 from "@/assests/industry/industry/L. H. Sugar Factory.png";
+import distilleries6 from "@/assests/industry/industry/HBL (HPCL Biofuels Ltd.).gif";
+import distilleries7 from "@/assests/industry/industry/Dwarikesh Sugar Industries Ltd..jpeg";
+import distilleries8 from "@/assests/industry/industry/Tikaula Sugar Mills Limited.jpg";
+import distilleries9 from "@/assests/industry/industry/Radico NV Distilleries.png";
+import distilleries10 from "@/assests/industry/industry/Kesar Enterprises.avif";
+import distilleries11 from "@/assests/industry/industry/Sri Chamundeswari Sugars Ltd..png";
+import distilleries12 from "@/assests/industry/industry/Core Green Sugar & Fuels Pvt. Ltd..gif";
+import distilleries13 from "@/assests/industry/industry/Rajshree Sugars & Chemicals Limited.png";
 
 import textile1 from "@/assests/industry/industry/textile1.png";
 import textile2 from "@/assests/industry/industry/textile2.png";
@@ -93,6 +115,27 @@ export const IndustryDataArray = [
         name: "Uttarakhand Jal Vidhyut Nigam linited - UJVN L",
         des: "Hydro Power Generation Sector",
         img: power3,
+        type: ["POWER PLANT"],
+        subType: ["Hydro Power"]
+    },
+    {
+        name: "Alaknanda Hydro Power Company (GVK)",
+        des: "Hydro Power Generation Sector",
+        img: powerhydro3,
+        type: ["POWER PLANT"],
+        subType: ["Hydro Power"]
+    },
+    {
+        name: "NHPC Limited",
+        des: "Hydro Power Generation Sector",
+        img: powerhydro4,
+        type: ["POWER PLANT"],
+        subType: ["Hydro Power"]
+    },
+    {
+        name: "THDC India Ltd.",
+        des: "Hydro Power Generation Sector",
+        img: powerhydro5,
         type: ["POWER PLANT"],
         subType: ["Hydro Power"]
     },
@@ -202,9 +245,58 @@ export const IndustryDataArray = [
         subType: []
     },
     {
+        name: "Vikram Cement",
+        des: "Cement Industry",
+        img: cement2,
+        type: ["CEMENT"],
+        subType: []
+    },
+    {
+        name: "Ultratech Cement",
+        des: "Cement Industry",
+        img: cement3,
+        type: ["CEMENT"],
+        subType: []
+    },
+    {
         name: "Munitions India Limited",
         des: "Defense Sector",
         img: defense1,
+        type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "Indian Space Research Organisation (ISRO)",
+        des: "Defense Sector",
+        img: defense2,
+        type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "Military Engineering Services",
+        des: "Defense Sector",
+        img: defense3,
+        type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "Hathor Rockets",
+        des: "Defense Sector",
+        img: defense4,
+        type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "Hindustan Aeronautics Limited (HAL)",
+        des: "Defense Sector",
+        img: defense5,
+        type: ["DEFENSE"],
+        subType: []
+    },
+    {
+        name: "Indian Ordnance Factory (Dehradun)",
+        des: "Defense Sector",
+        img: defense6,
         type: ["DEFENSE"],
         subType: []
     },
@@ -229,10 +321,118 @@ export const IndustryDataArray = [
         type: ["WATER MANAGEMENT"],
         subType: []
     }
+    ,
+    {
+        name: "Jal Shakti, Jammu (Public Health Engineering Department)",
+        des: "Water Management",
+        img: water4,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    }
+    ,
+    {
+        name: "Military Engineering Services",
+        des: "Water Management",
+        img: water5,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    }
+    ,
+    {
+        name: "Uttarakhand Peyjal Sansadhan Vikas evam Nirman Nigam",
+        des: "Water Management",
+        img: water6,
+        type: ["WATER MANAGEMENT"],
+        subType: []
+    }
     , {
         name: "Carlsberg",
         des: "Distilleries",
         img: distilleries1,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "DCM Shriram Limited",
+        des: "Distilleries",
+        img: distilleries2,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Bajaj Hindustan Sugar Ltd.",
+        des: "Distilleries",
+        img: distilleries3,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "L. H. Sugar Factory",
+        des: "Distilleries",
+        img: distilleries4,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "HBL (HPCL Biofuels Limited)",
+        des: "Distilleries",
+        img: distilleries6,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Dwarikesh Sugar Industries Ltd.",
+        des: "Distilleries",
+        img: distilleries7,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Tikaula Sugar Mills Ltd.",
+        des: "Distilleries",
+        img: distilleries8,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Radico NV Distilleries",
+        des: "Distilleries",
+        img: distilleries9,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Kesar Enterprises",
+        des: "Distilleries",
+        img: distilleries10,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Sri Chamundeswari Sugars Limited",
+        des: "Distilleries",
+        img: distilleries11,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Core Green Sugar & Fuels Pvt. Ltd.",
+        des: "Distilleries",
+        img: distilleries12,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Rajshree Sugars & Chemicals Limited",
+        des: "Distilleries",
+        img: distilleries13,
+        type: ["DISTILLERIES"],
+        subType: []
+    },
+    {
+        name: "Shri Vitthal SSK Ltd.",
+        des: "Distilleries",
+        img: "",
         type: ["DISTILLERIES"],
         subType: []
     },
@@ -322,139 +522,139 @@ export const IndustryDataArray = [
     // }
 ]
 
-export const sugarIndustryCLient=[
-"Akbarpur Chini Mills Ltd.",
-"Amla Agri Industries, Betul (MP)",
-"Audamvarraoji Patil Sahakar Karkhana Ltd., Solapur",
-"Bajaj Hindusthan Ltd. (multiple units)",
-"Balrampur Chini Mill Ltd., Kumbhi Unit",
-"Baramati Agro (Shetfalgada & Kannad Units)",
-"Bhairavnath Sugar Works Ltd.",
-"CENTRITECH ENGINEERS, Satara",
-"Chadda Sugar & Industries, Khiri (Batala)",
-"Delta Sugars Ltd., Krishna (A.P.)",
-"Dhampur Sugar Mills Ltd. (West Indies Project)",
-"D.S.M. Sugar Kashipur Ltd.",
-"Dwarikesh Sugar & Industries Ltd. (multiple locations)",
-"Eastern Sugar Mills (Nepal)",
-"EID Parry (multiple locations in Tamil Nadu)",
-"Ganpati Sugar Industries / Ganpati Sugars Industries Ltd.",
-"Gobind Sugar Mills, Aira",
-"Govind Nagar Sugar Ltd., Walterganj",
-"Guleria Chini Mills",
-"Haidergarh Chini Mills, Barabanki",
-"HPCL Biofuels Ltd., West Champaran (Bihar)",
-"Indiana Sucotech Pvt. Ltd., Pune",
-"INDIAN SUGAR MANUFACTURING CO LTD, Karnataka",
-"K.M. Sugar Mills Ltd., Motinagar",
-"Kasturi Sugar Mills Ltd., Unn",
-"Kesar Enterprises, Baheari, Bareilly",
-"Kumbhi Chini Mills",
-"L.H. Sugar Factory Ltd., Pilibhit",
-"Laila Sugar (Belgaum)",
-"Lakshmi Sugar (Dhanashree Agro Ltd., Iqubalpur)",
-"Lokmanya Sakhar Udyog Ltd. (Maharashtra)",
-"M/S NPS Sugar Industries Pvt. Ltd., Chhindwara (MP)",
-"M/S VNIP Distillizers and Sugar Ltd., Haveri",
-"Mankapur Chini Mills",
-"Modi Sugar Works, Modinagar",
-"Mysore Sugar Company",
-"Mylar Sugar Ltd., Bellary",
-"Naraingarh Sugar Mills Ltd., Haryana",
-"Oudh Sugar Mills Ltd., Hargaon",
-"PBS Foods (Sugar) Pvt. Ltd., Chandpur",
-"Ponni Sugar, Erode",
-"Rajasthan State Ganganagar Sugar Mills Ltd.",
-"Rana Sugar Ltd., Belwara",
-"Rauzagaon Chini Mill",
-"Riga Sugar Company Ltd., Bihar",
-"S. V. Sugar Mills Ltd., Kancheepuram",
-"Sagar Sugar & Allied, Chittor",
-"Sakaria Biswan Sugar Factory, Biswan",
-"Saraya Sugar Mills Ltd., Gorakhpur",
-"Shakti Sugars Ltd., Tamil Nadu",
-"Shantiraj Engineers & Fabricators, Pune",
-"Shri Krishna Khandshari Sugar Mills, Taloda-Nandurbar (MH)",
-"Shri Krishna Khansari Sugar Mills, Maharashtra",
-"SS Engineers (multiple projects)",
-"Sugar Corporation of Uganda Ltd., Lugazi",
-"Superior Food Grain Pvt. Ltd. (U.P.)",
-"The Basti Sugar Mills Co. Ltd.",
-"The Pratapur Sugar & Industries Ltd.",
-"The United Provinces Sugar Co. Ltd.",
-"Tirupati Sugar, Bagaha",
-"Triveni Engg. & Industries Ltd. (multiple units)",
-"United Provinces Sugar, Kushinagar",
-"UNN Sugar Complex",
-"Upper Doab Sugar Mills, Shamli",
-"Upper Ganges Sugar Industries Ltd., Seohara",
-"Uttam Sucrotech / Uttam Sucrotech International Pvt. Ltd.",
-"Wahid Sandhar Sugar Ltd., Phagwara",
-"Wave Industries Pvt. Ltd. (multiple units)",
-"White Nile Sugar Project, Sudan",
-"Yokogawa India Ltd. (various projects)",
-"Yadu Sugar Ltd. (U.P.)"
+export const sugarIndustryCLient = [
+    "Akbarpur Chini Mills Ltd.",
+    "Amla Agri Industries, Betul (MP)",
+    "Audamvarraoji Patil Sahakar Karkhana Ltd., Solapur",
+    "Bajaj Hindusthan Ltd. (multiple units)",
+    "Balrampur Chini Mill Ltd., Kumbhi Unit",
+    "Baramati Agro (Shetfalgada & Kannad Units)",
+    "Bhairavnath Sugar Works Ltd.",
+    "CENTRITECH ENGINEERS, Satara",
+    "Chadda Sugar & Industries, Khiri (Batala)",
+    "Delta Sugars Ltd., Krishna (A.P.)",
+    "Dhampur Sugar Mills Ltd. (West Indies Project)",
+    "D.S.M. Sugar Kashipur Ltd.",
+    "Dwarikesh Sugar & Industries Ltd. (multiple locations)",
+    "Eastern Sugar Mills (Nepal)",
+    "EID Parry (multiple locations in Tamil Nadu)",
+    "Ganpati Sugar Industries / Ganpati Sugars Industries Ltd.",
+    "Gobind Sugar Mills, Aira",
+    "Govind Nagar Sugar Ltd., Walterganj",
+    "Guleria Chini Mills",
+    "Haidergarh Chini Mills, Barabanki",
+    "HPCL Biofuels Ltd., West Champaran (Bihar)",
+    "Indiana Sucotech Pvt. Ltd., Pune",
+    "INDIAN SUGAR MANUFACTURING CO LTD, Karnataka",
+    "K.M. Sugar Mills Ltd., Motinagar",
+    "Kasturi Sugar Mills Ltd., Unn",
+    "Kesar Enterprises, Baheari, Bareilly",
+    "Kumbhi Chini Mills",
+    "L.H. Sugar Factory Ltd., Pilibhit",
+    "Laila Sugar (Belgaum)",
+    "Lakshmi Sugar (Dhanashree Agro Ltd., Iqubalpur)",
+    "Lokmanya Sakhar Udyog Ltd. (Maharashtra)",
+    "M/S NPS Sugar Industries Pvt. Ltd., Chhindwara (MP)",
+    "M/S VNIP Distillizers and Sugar Ltd., Haveri",
+    "Mankapur Chini Mills",
+    "Modi Sugar Works, Modinagar",
+    "Mysore Sugar Company",
+    "Mylar Sugar Ltd., Bellary",
+    "Naraingarh Sugar Mills Ltd., Haryana",
+    "Oudh Sugar Mills Ltd., Hargaon",
+    "PBS Foods (Sugar) Pvt. Ltd., Chandpur",
+    "Ponni Sugar, Erode",
+    "Rajasthan State Ganganagar Sugar Mills Ltd.",
+    "Rana Sugar Ltd., Belwara",
+    "Rauzagaon Chini Mill",
+    "Riga Sugar Company Ltd., Bihar",
+    "S. V. Sugar Mills Ltd., Kancheepuram",
+    "Sagar Sugar & Allied, Chittor",
+    "Sakaria Biswan Sugar Factory, Biswan",
+    "Saraya Sugar Mills Ltd., Gorakhpur",
+    "Shakti Sugars Ltd., Tamil Nadu",
+    "Shantiraj Engineers & Fabricators, Pune",
+    "Shri Krishna Khandshari Sugar Mills, Taloda-Nandurbar (MH)",
+    "Shri Krishna Khansari Sugar Mills, Maharashtra",
+    "SS Engineers (multiple projects)",
+    "Sugar Corporation of Uganda Ltd., Lugazi",
+    "Superior Food Grain Pvt. Ltd. (U.P.)",
+    "The Basti Sugar Mills Co. Ltd.",
+    "The Pratapur Sugar & Industries Ltd.",
+    "The United Provinces Sugar Co. Ltd.",
+    "Tirupati Sugar, Bagaha",
+    "Triveni Engg. & Industries Ltd. (multiple units)",
+    "United Provinces Sugar, Kushinagar",
+    "UNN Sugar Complex",
+    "Upper Doab Sugar Mills, Shamli",
+    "Upper Ganges Sugar Industries Ltd., Seohara",
+    "Uttam Sucrotech / Uttam Sucrotech International Pvt. Ltd.",
+    "Wahid Sandhar Sugar Ltd., Phagwara",
+    "Wave Industries Pvt. Ltd. (multiple units)",
+    "White Nile Sugar Project, Sudan",
+    "Yokogawa India Ltd. (various projects)",
+    "Yadu Sugar Ltd. (U.P.)"
 ]
 
 export const paperIndustryClients = [
-  "Century Pulp & Paper",
-  "Trident Group",
-  "Naini Paper Mill",
-  "Sahota Papers Ltd.",
-  "Malu Paper Mills Ltd.",
-  "Rama Paper Mills Limited",
-  "JK Paper Ltd.",
-  "Emami Paper Mills Ltd.",
-  "Astron Paper & Board Mill",
-  "Ajit",
-  "Yash Papers",
-  "Ellora Paper Mills Ltd.",
-  "Andhra Paper Limited",
-  "Orient Paper",
-  "AGIO Paper",
-  "Bilt",
-  "Kalpataru Papers",
-  "The Mysore Paper Mills Ltd.",
-  "Genius Paper & Boards Limited",
-  "Speciality Papers",
-  "Rainbow Papers Limited",
-  "Soma Papers and Industries Ltd.",
-  "3P Land",
-  "Shri Bhawani Paper Mills Limited",
-  "Shri Rama Papers",
-  "Shree Krishna Paper",
-  "The West Coast Paper Mills Ltd.",
-  "Tamilnadu Newsprint and Papers Limited",
-  "Victory Paper & Boards Pvt. Ltd.",
-  "Shree Rajaeshwaranand Paper Mills Ltd.",
-  "Nath Pulp & Paper Mills Limited",
-  "Shree Sharda Paper Limited",
-  "BJ Paper & Boards",
-  "Simplex Papers Ltd.",
-  "Servalakshmi Paper Limited",
-  "B K Duplex Board Limited",
-  "Pitambar Coated Papers Ltd.",
-  "International Papers",
-  "Anand Triplex Board Pvt. Ltd.",
-  "Agarwal Duplex",
-  "Garg Duplex & Paper Mills",
-  "Janki Newsprint",
-  "Nicer Paper Mills",
-  "Om Shree Papertek",
-  "R N Paper & Board",
-  "Rajahmundary Paper Mills",
-  "Rajlaskhmi Paper & Boards",
-  "Silverton Papers Limited",
-  "Venkateswara Agro Papers",
-  "Akula Boards Pvt. Ltd.",
-  "Arabian Craft Paper",
-  "Dev Prayag Paper Mill",
-  "Disha Paper Mill",
-  "Eminent Paper Industies Limited",
-  "Mahalaxmi Crafts",
-  "Smrity Paper Mills",
-  "Sree Brinda Papers",
-  "Sri M K Paper Mills",
-  "Sri Meher Gayatri Devi Craft",
-  "Vishal Paper Industries"
+    "Century Pulp & Paper",
+    "Trident Group",
+    "Naini Paper Mill",
+    "Sahota Papers Ltd.",
+    "Malu Paper Mills Ltd.",
+    "Rama Paper Mills Limited",
+    "JK Paper Ltd.",
+    "Emami Paper Mills Ltd.",
+    "Astron Paper & Board Mill",
+    "Ajit",
+    "Yash Papers",
+    "Ellora Paper Mills Ltd.",
+    "Andhra Paper Limited",
+    "Orient Paper",
+    "AGIO Paper",
+    "Bilt",
+    "Kalpataru Papers",
+    "The Mysore Paper Mills Ltd.",
+    "Genius Paper & Boards Limited",
+    "Speciality Papers",
+    "Rainbow Papers Limited",
+    "Soma Papers and Industries Ltd.",
+    "3P Land",
+    "Shri Bhawani Paper Mills Limited",
+    "Shri Rama Papers",
+    "Shree Krishna Paper",
+    "The West Coast Paper Mills Ltd.",
+    "Tamilnadu Newsprint and Papers Limited",
+    "Victory Paper & Boards Pvt. Ltd.",
+    "Shree Rajaeshwaranand Paper Mills Ltd.",
+    "Nath Pulp & Paper Mills Limited",
+    "Shree Sharda Paper Limited",
+    "BJ Paper & Boards",
+    "Simplex Papers Ltd.",
+    "Servalakshmi Paper Limited",
+    "B K Duplex Board Limited",
+    "Pitambar Coated Papers Ltd.",
+    "International Papers",
+    "Anand Triplex Board Pvt. Ltd.",
+    "Agarwal Duplex",
+    "Garg Duplex & Paper Mills",
+    "Janki Newsprint",
+    "Nicer Paper Mills",
+    "Om Shree Papertek",
+    "R N Paper & Board",
+    "Rajahmundary Paper Mills",
+    "Rajlaskhmi Paper & Boards",
+    "Silverton Papers Limited",
+    "Venkateswara Agro Papers",
+    "Akula Boards Pvt. Ltd.",
+    "Arabian Craft Paper",
+    "Dev Prayag Paper Mill",
+    "Disha Paper Mill",
+    "Eminent Paper Industies Limited",
+    "Mahalaxmi Crafts",
+    "Smrity Paper Mills",
+    "Sree Brinda Papers",
+    "Sri M K Paper Mills",
+    "Sri Meher Gayatri Devi Craft",
+    "Vishal Paper Industries"
 ];
