@@ -1,0 +1,2 @@
+export const OmniCrmUrl="http://localhost:3333"
+export const PUJADIVINE_BACKEND_TOKEN="TmpWbE1EVTROekUzTVRsbE1qYzNaalV6WWpFMFkySXg6NjVlMDU5Yjg3MTllMjc3ZjUzYjE0Y2My";
