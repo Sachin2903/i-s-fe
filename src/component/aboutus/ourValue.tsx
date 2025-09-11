@@ -99,8 +99,10 @@ export default function OurValue() {
                 })
             }
         </aside>
-        <a href="/pdf/company.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex justify-center mx-auto w-fit mt-8 sm:mt-16 rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf /> Download Brochure</a>
-
+<section className="flex  mt-8 flex-wrap sm:mt-16 justify-center w-full items-center gap-5">
+            <a href="/pdf/company.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex  justify-center w-fit  rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf />Company Profile</a>
+            <a href="/pdf/technicalcatalogue.pdf" target="_blank" className="bg-[#3461FF] text-sm font-semibold text-white flex justify-center  w-fit  rounded-md items-center gap-3 sm:text-base py-4 px-8"><FaFilePdf />Technical Cataolgue</a>
+        </section>
         <aside className="py-20">
             <h3 className="text-[24px] w-full justify-center flex items-center md:text-[28px] lg:text-[32px] xl:text-[36px] font-bold">Our Value</h3>
             <aside className="grid gap-6 lg:gap-8 mt-10 md:mt-14 grid-col-1 sm:grid-cols-2 lg:grid-cols-3">
