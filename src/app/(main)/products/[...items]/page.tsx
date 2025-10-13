@@ -35,7 +35,7 @@ export default async function ProductDetails({ params }: any) {
           {product.type.join(" / ")?.toLowerCase()}
         </Link>
 
-        {product?.subType?.length > 0 && (
+        {(product?.subType?.length > 0&&typeof product?.subType?.[0]=="string") && (
           <>
             <IoMdArrowDropright />
             <p className="text-start capitalize">{product.subType.join(" / ")?.toLowerCase()}</p>

@@ -42,7 +42,7 @@ const productTypes = [
     {
         name: "Motorized Actuators",
         img: motorized,
-        special_heading: "i-Tork"
+        special_heading: "in-Tork"
 
     },
     {

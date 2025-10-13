@@ -74,7 +74,7 @@ export default function SpecialAutomation() {
             <aside className="flex  w-full md:w-fit mb-4 md:mb-0  justify-center  md:justify-start items-start">
                 <aside className="w-full  flex-col p-6 md:pt-0 md:pr-0 md:mt-2  sm:w-[378] md:w-[329px]  xl:w-[521px]   flex justify-center items-center ">
                     <img className="max-w-full  object-cover object-top h-full" alt="i&s" src={items?.img[0].src} />
-                    <button onClick={() => setOpenModel(true)} className="px-12 sm:px-14 cursor-pointer md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 w-full xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
+                    <button onClick={() => setOpenModel(true)} className="px-12 sm:px-14 cursor-pointer md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 w-full xl:py-4 text-white bg-[#0057FF]">Enquire Now</button>
                 </aside>
             </aside>
             <aside className="flex gap-1 md:border-l min-h-[382px] md:min-h-[290px lg:min-h-[345px] xl:min-h-[426px]  md:pl-4 lg:pl-6 md:border-[#c7cacf] max-w-[940px]  flex-col  justify-start items-start">
@@ -107,39 +107,39 @@ export default function SpecialAutomation() {
         </aside>
 
 
-            <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
-            <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
-                <Carousel
-                    responsive={responsive}
-                    infinite
-                    autoPlay
-                    arrows={false}
-                    autoPlaySpeed={3000}
-                    showDots={true}
-                    customDot={<CustomDot />}
-                    dotListClass="flex justify-center items-center "
-                    className="w-full  "
-                    draggable={true}
-                // customLeftArrow={<CustomLeftArrow />}
-                // customRightArrow={<CustomRightArrow />}
+        <p className="text-[#000B1D]   px-[2%]  md:px-[2%] lg:px-[2.5%] xl:px-[3%] mb-5  font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[36px]">Related Products</p>
+        <section className="w-dvw  relative flex justify-start items-center pb-16 flex-col bg-white ">
+            <Carousel
+                responsive={responsive}
+                infinite
+                autoPlay
+                arrows={false}
+                autoPlaySpeed={3000}
+                showDots={true}
+                customDot={<CustomDot />}
+                dotListClass="flex justify-center items-center "
+                className="w-full  "
+                draggable={true}
+            // customLeftArrow={<CustomLeftArrow />}
+            // customRightArrow={<CustomRightArrow />}
 
-                >
+            >
 
-                    {
-                        allProductsArray.filter((data: any) => data?.tag?.includes(subType!=="SUGAR AUTOMATION"?"Water Automation":"Sugar Automation")).map((data: Record<string, any>, index: number) => {
-                            return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
-                                <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
-                                    <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
-                                    <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
-                                </div>
-                                <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
-                                <p className="text-[12px] line-clamp-2 min-h-[40px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">{data.des}</p>
-                                <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
-                            </aside></Link>
-                        })
-                    }
-                </Carousel>
-            </section>
+                {
+                    allProductsArray.filter((data: any) => data?.tag?.includes(subType !== "SUGAR AUTOMATION" ? "Water Automation" : "Sugar Automation")).map((data: Record<string, any>, index: number) => {
+                        return <Link key={index} href={`/products/${data.id}/${encodeURIComponent(data.name)}`}> <aside className=" border mb-16 mx-[4%] group rounded-lg p-4 border-[#EBEDF0] shadow-md" >
+                            <div className="w-full relative   shadow mb-3 border border-[#EBEDF0] rounded-lg overflow-hidden flex justify-center items-center h-[210px] sm:h-[220px] md:h-[230px] lg:h-[240px] xl:h-[255px]">
+                                <img className="max-h-[90%] object-contain object-center" src={data?.img?.[0]?.src} alt="i&s" />
+                                <p className="text-[12px] text-white group-hover:translate-y-0 transition-transform duration-500 ease-in-out translate-y-[250px] bg-[#000000a6]  absolute top-0 left-0 p-4 flex justify-center items-center text-center  w-full h-full  font-medium text-shadow-lg  sm:text-[13px] md:text-[14px] flex-col gap-2"><IoMdInformationCircle className="flex-shrink-0 text-2xl" />{data.des}</p>
+                            </div>
+                            <p className="text-[#323334] line-clamp-1 px-0.5 font-semibold text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] ">{data.name}</p>
+                            <p className="text-[12px] line-clamp-2 min-h-[40px] px-0.5 font-medium text-[#323334] sm:text-[13px] md:text-[14px]">{data.des}</p>
+                            <button className="hover:bg-[#0057FF] font-medium mt-4 rounded-lg cursor-pointer w-full flex justify-center py-2 items-center gap-2 border text-[12px] md:text-[14px] text-[#0057FF]  border-[#0057FF] hover:text-white"><IoMdCall className="scale-110" /> Enquire Now</button>
+                        </aside></Link>
+                    })
+                }
+            </Carousel>
+        </section>
 
     </section>
 }

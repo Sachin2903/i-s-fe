@@ -112,6 +112,10 @@ import sugar2 from "@/assests/items/sugar images/sugar2.png"
 import sugar3 from "@/assests/items/sugar images/sugar3.png"
 import sugar4 from "@/assests/items/sugar images/sugar5.png"
 
+import multiturn1 from "@/assests/items/Multi Turn Actuator New 1.png"
+import multiturn2 from "@/assests/items/Multi Turn Actuator New 2.jpg"
+import multiturn3 from "@/assests/items/Multi Turn Actuator New 3.png"
+
 export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad91",
@@ -346,7 +350,7 @@ export const allProductsArray = [
         pdf: [{ banner: "/pdf/pdf1banner.jpg", pdf: "/pdf/pdf1.pdf" }],
         subType: [],
         name: "Multi-Turn Intelligent Actuator",
-        tag: ["Water Automation"], img: [knifeEdge23, Actuators21],
+        tag: ["Water Automation"], img:[multiturn1,multiturn2,multiturn3],
         des: "Robust, intelligent actuator delivering high-torque, precision-controlled valve automation with non-intrusive setup and smart diagnostics.",
         extraDes: "Precision meets power in our Multi-Turn Intelligent Actuator, built to deliver reliable, automated valve control with unmatched flexibility. Designed for multi-turn applications, like gate, globe, and diaphragm valves. Ideal for integration into complex control systems, this actuator supports HMI interfaces, DCS/PLC connectivity, and firmware updates for future-ready operation."
     },

@@ -106,7 +106,7 @@ export default function ProductDetailsHelper({ product }: any) {
                 <p className="text-[#7F848D] mt-5  font-medium text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] ">{items.extraDes}</p>
 
 
-                <button onClick={() => { setOpenModel(true) }} className="px-12 cursor-pointer sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 xl:py-4 text-white bg-[#0057FF]">Enquiry Now</button>
+                <button onClick={() => { setOpenModel(true) }} className="px-12 cursor-pointer sm:px-14 md:px-16  mt-5 lg:px-20 xl:px-24  rounded-lg text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] flex-shrink-0 font-semibold  py-2.5 lg:py-3 xl:py-4 text-white bg-[#0057FF]">Enquire Now</button>
 
             </aside>
         </section>
@@ -124,7 +124,7 @@ export default function ProductDetailsHelper({ product }: any) {
                             href={data.pdf}
                             target="_blank"
                             rel="noopener noreferrer"
-                            download={`${product.name??"i&s"}.pdf`}
+                            download={`${product.name ?? "i&s"}.pdf`}
                             className="relative cursor-pointer block w-[164px] sm:w-[184px] md:w-[204px] lg:w-[224px] xl:w-[254px] rounded-lg shadow-lg hover:shadow-xl transition duration-300"
                         >
                             <p className="ribbon">Open PDF</p>
