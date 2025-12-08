@@ -293,13 +293,13 @@ export const IndustryDataArray = [
         type: ["DEFENSE"],
         subType: []
     },
-    {
-        name: "Indian Ordnance Factory (Dehradun)",
-        des: "Defense Sector",
-        img: defense6,
-        type: ["DEFENSE"],
-        subType: []
-    },
+    // {
+    //     name: "Indian Ordnance Factory (Dehradun)",
+    //     des: "Defense Sector",
+    //     img: defense6,
+    //     type: ["DEFENSE"],
+    //     subType: []
+    // },
     {
         name: "UP Jal Nigam",
         des: "Water Management",
