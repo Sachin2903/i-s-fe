@@ -347,7 +347,7 @@ export const allProductsArray = [
     {
         id: "73aac12f-0766-4e37-84c1-f02d8e07ad110",
         type: ["MOTORIZED ACTUATORS"],
-        pdf: [{ banner: "/pdf/pdf1banner.jpg", pdf: "/pdf/pdf1.pdf" }],
+        pdf: [{ banner: "/pdf/pdf1banner.png", pdf: "/pdf/pdf1.pdf" }],
         subType: [],
         name: "Multi-Turn Intelligent Actuator",
         tag: ["Water Automation"], img:[multiturn1,multiturn2,multiturn3],
