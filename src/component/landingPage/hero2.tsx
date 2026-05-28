@@ -49,7 +49,7 @@ const categoryArray = [
         name: "Linear Power Cylinder",
         class: "h-full scale-[1.5]",
         img: linear,
-        des: "Linear Power Cylinder are widely used for accurately and positively.",
+        des: "Engineered for controlled linear force in demanding industrial applications.",
         count: 50
     }
 ]
