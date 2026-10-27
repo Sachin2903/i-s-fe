@@ -12,7 +12,7 @@ export default function Footer() {
             <ul className="flex  flex-col text-white justify-start  text-sm md:text-base font-medium items-start gap-2 lg:gap-3">
                 <Link href="/"><li>HOME</li></Link>
                 <Link href="/products"><li>PRODUCTS</li></Link>
-                <Link href="/certificate"><li>CERTIFICATE</li></Link>
+                <Link href="/certifications"><li>CERTIFICATIONS</li></Link>
                 <Link href="/industry"><li>INDUSTRY</li></Link>
                 <Link target="_blank" href="https://blog.instruments-systems.in"><li>BLOGS</li></Link>
                 <Link href="/aboutus"><li>ABOUT US</li></Link>
