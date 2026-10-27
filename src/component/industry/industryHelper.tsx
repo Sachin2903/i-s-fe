@@ -33,7 +33,7 @@ const IndustryTypes = [
         name: "Power Plant",
         img: power,
         bannerHeading: "Shaping the Future of Energy Generation",
-        des: "For over a century, our technologies have powered the world—making energy generation more reliable, more efficient, and more sustainable across thermal, hydro, and renewable plants.",
+        des: "For decades, our technologies have powered the world—making energy generation more reliable, more efficient, and more sustainable across thermal, hydro, and renewable plants.",
         banner: powerBanner,
         subType: [{
             name: "Thermal Power",
